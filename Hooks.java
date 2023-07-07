@@ -1,0 +1,319 @@
+class 1 -
+
+after creating a maven project and added all the dependencies
+now we are going to write gherkin test case in cucumber project
+
+every single test case will be considered as one scenario
+
+-- we write scenario in feature file in cucumber
+
+creating features directory under resources to keep all feature files
+
+how to create feature file
+right click - file - name of file - test.feature (.feature is the extension)
+
+
+US-12345
+Perform login
+
+class 2 -
+recap - cucumber/gherkin/BDD
+
+we write such things in feature file where every test case will be considered as scenario
+
+framework -
+build management tool - maven
+programming language - java
+tool - selenium & cucumber
+
+main - for writing the development code
+test - for writing the testing code
+
+technical - java
+non technical - resources
+
+US - perform login
+
+Feature: This is the name of my user story
+Scenario: This is the name of my test case
+Tags- Given, When, And, Then
+
+rules -
+never add even a small character or . in your step in feature file after step def
+otherwise it will not find the exact linking of the step def
+
+never create duplicate step def for the steps otherwise it will confuse and will
+throw an exception
+
+login.feature
+Given I am launching the application
+
+add employee.feature
+Given I am launching the application
+
+User story - searching an employee in HRMS application
+
+US 121 - search employee by id
+
+
+
+
+US 122 - search employee by name
+
+Class 3 -
+
+recap -
+    one user story, we need one feature file
+    these scenarios are linked with the step definitions
+
+    we have to write the code/script in the step definition itself
+
+    test runner -
+    we use junit-cucumber to run our tests
+    cucumber options to provide multiple customizable options
+
+    features - path to all the feature files
+    glue - to provide the path of step def package
+    dry run - to generate missing step def, when we set it to true, it will generate
+    all the step def
+    tags - to execute scenarios of our choice, we can use different tags in scenarios
+
+    we use OR keyword in tags to execute either scenario A or scenario B
+    (ScenarioA or ScenarioB)
+    we use AND keyword in tags to execute the scenario having both conditions true
+    (scenarioA and scenarioB), only the test case having both tags will be executed
+
+
+    login scenario -
+        admin login
+        ess login
+        invalid login
+
+    Background - when the flow of all the scenarios is same in one feature file,
+    it will execute before all the scenarios.
+    it will be limited to one feature file.
+    for every feature file, there will be different background
+
+config.prop - to keep all the configurations related parameters in it
+config reader class - read the data from .prop files
+constants class - to keep all the paths from this class
+
+Hooks - when we need to write the pre condition and post condition for the
+complete project all the test cases, we use hooks.
+
+we have 2 hooks in cucumber-
+@before - pre condition of all the test cases
+@after - post condition of all the test cases
+
+Rule - we must create hooks class in steps package
+
+Hooks vs Background -
+Hooks will execute first and then background will execute
+Hooks is same for all the feature file but backgroun is different for all the featurtefile
+
+order of execution -
+first hooks will execute
+then background will execute
+then test scenario
+then hooks will execute
+
+class 4 -
+
+recap -
+
+in the framework, we should not pass any data hard coded -
+to pass data we have config.properties file
+config reader class - here in this class, we read our data
+
+constants - to keep all the paths of the constants classes and file, we use this class
+
+Background - in one feature file, when the flow is same for all the scenarios, you just
+keep these similar steps in background, it is limited to one feature file
+
+Hooks - we have 2 hooks,
+@Before - pre condition for the complete project
+@After - post condition for the complete project
+
+Hooks must be declared in steps package
+
+test runner -
+features,
+glue,
+dryRun,
+tags,
+plugin - pretty
+monochrome - true
+
+we need to write a function for screenshot which will save my screenshot for all the
+test cases with different names so that it will not be overriden
+
+screenshot method in cucumber - here it accepts array of byte for pictures
+
+POM - page object model design pattern
+for every screen/page in the application, we create a separate  class for it and
+keep all the locators/webelements of this page in this class and we create a key of
+locators which we will pass in every step.
+
+class 5 -
+recap -
+test runner class -
+
+POM - page object model design pattern -
+
+framework characteristics -
+
+it should be easily understandable
+it should be expandable
+it should be easy to maintain
+
+we created loginpage, employeesearchpage, dashboardpage, addemployeepage
+
+data driven testing - when your one test case executes against multiple set of data
+
+Class 6 -
+recap -
+we passed data from feature file itself to add one employee
+
+scenario - just a test case
+scenario-outline - with examples table - we pass key and value
+we implemented POM in all the pages - we setup page initializer class too
+
+we use assertions to verify verification and validation checkpoints
+majorly we work with assertEquals and assertTrue for our test cases
+this assert class comes from org.junit
+
+*******innessa, please find the notes here as per your request*******
+
+in data table - hooks and background executes just one time
+in examples table - hooks and background executed as many times as data set
+
+data table is applicable for just one step
+examples table is applicable for one complete scenario
+
+verification is checking the existance of element
+validation is checking the functionality of the element
+
+in cucumber framework you can add employees using multiple ways
+using hardcoded data
+using string  value from feature
+using examples table in scenario outline
+using data table in feature file
+using excel files
+
+
+in excel file - we have 2 types of extensions
+.xls - HSSF workbook
+.xlsx - XSSF workbook
+
+class 7
+recap -
+ examples table and data table -
+
+ in data table, we use scenario instead of scenario outline
+ data table is limited to one step but examples table works for all the scenario
+
+ in data table, we don't use examples key word and we don't pass keys in the step
+
+ hooks execute one time, background executes one time and scenario executes based on data set
+
+ adding the employees using excel file -
+ excel reader class to read the data from excel file
+ verified the employee has been added
+
+why reports - it is an artifact/proof that you have executed the scenario
+it gives you detailed information, how many test cases passed and failed
+
+html report - will be generated once you execute your code from runner class
+to open the report - right click on the report - select open in - select browser - chrome
+
+json report - we have to add plugin in runner class
+
+
+here in every framework - we need one point of execution and here this  point is
+pom.xml file (we add dependency, we add runner class, we add plugin, we execute)
+
+to execute runner class from pom.xml file, we need plugin (maven surefire plugin)
+
+
+build success message means your code is working fine and you can proceed further
+everytime we must execute test cases using pom.xml file
+
+to generate the report from pom.xml file, we need to add a plugin called
+maven cucumber reporting plugin
+
+we are generating the report without screenshot but we need screenshot for all test cases
+
+at the last step I will capture the screenshot
+so that even if it is passed or failed, it will give me that page
+
+there is a class in cucumber called Scenario class
+this scenario class from cucumber holds the complete information of your execution
+
+log 4j - it is a log file which we use for local execution related information
+log4j.xml file is responsible to integrate/add log messages into your framework
+log is the class in which you write all the methods
+DOM configurator is the place where you provide the path of log4j file
+and then you call all the methods to print your messages
+
+75-80 (success rate of automation)
+100 - 80 will be passed - 20 will be failed (example)
+
+rerun plugin we use to create failed.txt file
+this file has all the failed test cases which we can run from failed runner class
+
+class 8 -
+recap -
+reporting -
+runner class - html report -
+runner class - json report -
+cucumber maven reporting plugin from pom.xml file
+
+log4j - we added dependency in pom.xml file
+and we created log4j.xml file to generate logs/to integrate logs
+and we created Log class to write all the methods which one we need to use
+then we call DOMConfigurator and methods in steps which will print
+my execution logs in logfile.log
+
+failed.txt - rerun plugin in runner class - the path of failed.txt file which
+will be created after execution and it has the path of all failed scenarios
+and then we create failedrunner class to run only failed test cases
+
+report with screenshot -
+take screenshot - pattern - for taking unique ss everytime
+Hooks - post condition -
+passed and failed folder for ss -
+Scenario class in cucumber - it holds the complete information about execution
+using array of byte - attaching the screenshot in the report
+scenario.attach is the method we use for ss attach
+
+maven -
+
+lifecycle - phases in maven
+compile - source code converts into binary code
+package - code will be packaged into jars (developers use this part)
+install - jars will be installed to local repo
+deploy - here  jars will  be transferred to remote repo
+clean - it deletes target folder
+test - your code will be tested
+
+clean
+compile
+install
+package
+test
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
