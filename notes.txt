@@ -275,8 +275,8 @@ then we call DOMConfigurator and methods in steps which will print
 my execution logs in logfile.log
 
 failed.txt - rerun plugin in runner class - the path of failed.txt file which
-will be created after execution and it has the path of all failed scenarios
-and then we create failedrunner class to run only failed test cases
+will be created after execution and it has the path of all failed scenarios,
+and then we create failed runner class to run only failed test cases
 
 report with screenshot -
 take screenshot - pattern - for taking unique ss everytime

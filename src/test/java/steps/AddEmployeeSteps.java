@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utils.CommonMethods;
 import utils.Constants;
+import utils.DBUtils;
 import utils.ExcelReader;
 
 import java.util.Iterator;
@@ -14,6 +15,11 @@ import java.util.List;
 import java.util.Map;
 
 public class AddEmployeeSteps extends CommonMethods {
+
+    String firstName;
+    String middleName;
+    String lastName;
+    String empId;
 
     @When("user clicks on PIM option")
     public void user_clicks_on_pim_option() {
@@ -54,9 +60,14 @@ public class AddEmployeeSteps extends CommonMethods {
 
     @When("user enters {string} and {string} and {string}")
     public void user_enters_and_and(String firstName, String middleName, String lastName) {
+
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.lastName = lastName;
         sendText(firstName, addEmployeePage.firstNameField);
         sendText(middleName, addEmployeePage.middleNameField);
         sendText(lastName, addEmployeePage.lastNameField);
+        empId = addEmployeePage.employeeIdField.getAttribute("value");
     }
 
 
@@ -74,7 +85,7 @@ public class AddEmployeeSteps extends CommonMethods {
         // from feature file
         List<Map<String, String>> employeeNames = dataTable.asMaps();
 
-        for (Map<String, String> employee:employeeNames
+        for (Map<String, String> employee : employeeNames
         ) {
             //getting the values against the key in map
             String firstNameValue = employee.get("firstName");
@@ -102,22 +113,22 @@ public class AddEmployeeSteps extends CommonMethods {
         Iterator<Map<String, String>> itr = newEmployees.iterator();
 
         //it will check whether we have new element/value or not
-        while (itr.hasNext()){
+        while (itr.hasNext()) {
 
             //in this map, we have data from every single employee one by one it will give us that data
-            Map<String,String> mapNewEmp =  itr.next();
+            Map<String, String> mapNewEmp = itr.next();
             //we are filling the employee data now using mapNewEmp variable
             //BATCH 16, KEYS WHAT WE ARE PASSING HERE SHOULD MATCH WITH THE KEYS IN EXCEL
-            sendText(mapNewEmp.get("firstName"),addEmployeePage.firstNameField);
+            sendText(mapNewEmp.get("firstName"), addEmployeePage.firstNameField);
             sendText(mapNewEmp.get("lastName"), addEmployeePage.lastNameField);
             sendText(mapNewEmp.get("middleName"), addEmployeePage.middleNameField);
             sendText(mapNewEmp.get("photograph"), addEmployeePage.photograph);
 
             //we can enter username and password only after selecting the checkbox
-            if(!addEmployeePage.checkBoxLocator.isSelected()){
+            if (!addEmployeePage.checkBoxLocator.isSelected()) {
                 click(addEmployeePage.checkBoxLocator);
             }
-            sendText(mapNewEmp.get("username"),addEmployeePage.usernameTextFieldBox);
+            sendText(mapNewEmp.get("username"), addEmployeePage.usernameTextFieldBox);
             sendText(mapNewEmp.get("password"), addEmployeePage.passwordTextFieldBox);
             sendText(mapNewEmp.get("confirmPassword"), addEmployeePage.confirmPasswordBox);
 
@@ -134,17 +145,17 @@ public class AddEmployeeSteps extends CommonMethods {
 
             //print the value from the table row
             List<WebElement> rowData = driver.findElements(By.xpath("//table[@id='resultTable']/tbody/tr"));
-            for (int i=0; i<rowData.size(); i++){
+            for (int i = 0; i < rowData.size(); i++) {
                 System.out.println("I am inside the loop");
                 //it will return one by one all the data from the row
                 String rowText = rowData.get(i).getText();
                 //it will print the complete row data
-                //output of this will be empid firstname middlename lastname
+                //output of this will be empId firstname middlename lastname
                 System.out.println(rowText);
-                //we have to verify this data against the data coming from excel
+                //we have to verify this data against the data coming from Excel
 
-                String expectedData = empIdValue + " "+mapNewEmp.get("firstName")+" "+
-                        mapNewEmp.get("middleName")+" "+mapNewEmp.get("lastName");
+                String expectedData = empIdValue + " " + mapNewEmp.get("firstName") + " " +
+                        mapNewEmp.get("middleName") + " " + mapNewEmp.get("lastName");
 
                 Assert.assertEquals(expectedData, rowText);
                 //you can use below code too to verify the data
@@ -154,5 +165,20 @@ public class AddEmployeeSteps extends CommonMethods {
             //to add more employees we need to click on add employee button
             click(dashboardPage.addEmployeeButton);
         }
+    }
+
+    @Then("verify employee is stored in database")
+    public void verifyEmployeeIsStoredInDatabase() {
+        String query = "select emp_firstName,emp_middle_name,emp_lastname from hs_hr_employees where employee_id=" + empId + ";";
+        System.out.println(query);
+        List<Map<String, String>> mapList = DBUtils.fetch(query);
+        Map<String, String> firstRow=mapList.get(0);
+        String dbFirstName= firstRow.get("emp_firstName");
+        String dbMiddleName= firstRow.get("emp_middle_name");
+        String dbLastName= firstRow.get("emp_lastname");
+
+        Assert.assertEquals("FirstName from frontend does not match the firstname from database",firstName, dbFirstName);
+        Assert.assertEquals("MiddleName from frontend does not match the middlename from database",middleName, dbMiddleName);
+        Assert.assertEquals("LastName from frontend does not match the lastname from database",lastName, dbLastName);
     }
 }

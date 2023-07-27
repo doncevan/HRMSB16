@@ -5,6 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.junit.Assert;
+import pages.LoginPage;
 import utils.CommonMethods;
 import utils.ConfigReader;
 import utils.Log;
