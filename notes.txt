@@ -1,3 +1,4 @@
+
 class 1 -
 
 after creating a maven project and added all the dependencies
@@ -36,11 +37,11 @@ US - perform login
 
 Feature: This is the name of my user story
 Scenario: This is the name of my test case
-Tags-Given, When, And, Then
+Tags- Given, When, And, Then
 
 rules -
-never add even a small character or . in your step in feature file after step defined
-otherwise it will not find the exact linking of the step definition
+never add even a small character or . in your step in feature file after step def
+otherwise it will not find the exact linking of the step def
 
 never create duplicate step def for the steps otherwise it will confuse and will
 throw an exception
@@ -73,9 +74,9 @@ recap -
     cucumber options to provide multiple customizable options
 
     features - path to all the feature files
-    glue - to provide the path of step definition package
-    dry run - to generate missing step definitions, when we set it to true, it will generate
-    all the step definitions
+    glue - to provide the path of step def package
+    dry run - to generate missing step def, when we set it to true, it will generate
+    all the step def
     tags - to execute scenarios of our choice, we can use different tags in scenarios
 
     we use OR keyword in tags to execute either scenario A or scenario B
@@ -98,18 +99,18 @@ config.prop - to keep all the configurations related parameters in it
 config reader class - read the data from .prop files
 constants class - to keep all the paths from this class
 
-Hooks - when we need to write the pre-condition and post condition for the
+Hooks - when we need to write the pre condition and post condition for the
 complete project all the test cases, we use hooks.
 
 we have 2 hooks in cucumber-
-@before - pre-condition of all the test cases
+@before - pre condition of all the test cases
 @after - post condition of all the test cases
 
 Rule - we must create hooks class in steps package
 
 Hooks vs Background -
 Hooks will execute first and then background will execute
-Hooks are the same for all the feature files but background is different for all the feature files
+Hooks is same for all the feature file but backgroun is different for all the featurtefile
 
 order of execution -
 first hooks will execute
@@ -131,7 +132,7 @@ Background - in one feature file, when the flow is same for all the scenarios, y
 keep these similar steps in background, it is limited to one feature file
 
 Hooks - we have 2 hooks,
-@Before - pre-condition for the complete project
+@Before - pre condition for the complete project
 @After - post condition for the complete project
 
 Hooks must be declared in steps package
@@ -145,13 +146,13 @@ plugin - pretty
 monochrome - true
 
 we need to write a function for screenshot which will save my screenshot for all the
-test cases with different names so that it will not be overridden
+test cases with different names so that it will not be overriden
 
 screenshot method in cucumber - here it accepts array of byte for pictures
 
 POM - page object model design pattern
 for every screen/page in the application, we create a separate  class for it and
-keep all the locators/web-elements of this page in this class, and we create a key of
+keep all the locators/webelements of this page in this class and we create a key of
 locators which we will pass in every step.
 
 class 5 -
@@ -275,8 +276,8 @@ then we call DOMConfigurator and methods in steps which will print
 my execution logs in logfile.log
 
 failed.txt - rerun plugin in runner class - the path of failed.txt file which
-will be created after execution and it has the path of all failed scenarios,
-and then we create failed runner class to run only failed test cases
+will be created after execution and it has the path of all failed scenarios
+and then we create failedrunner class to run only failed test cases
 
 report with screenshot -
 take screenshot - pattern - for taking unique ss everytime
@@ -302,17 +303,590 @@ install
 package
 test
 
+open the cmd where your pom.xml file of the project exists
+mvn clean from cmd to clean the target folder
+mvn clean test will execute your code from cmd
+mvn test -Dcucumber.filter.tags="@invalid" we use to override tags
+
+
+_________________ API ____________
+
+API - application programming interface
+
+In restaurant -
+client/customer - who gives the order - request
+chef - who responds to the request
+waiter/server - who is responsible to deliver the request and response both
+
+ATM machines -
+
+Bank of america
+Wells fargo
+PNC
+chase
+citi
+
+citi bank - ATM chase -
+
+presentation layer - what we see on UI is presentation layer
+application layer - the logic of the application has been written
+data layer - database
+
+
+client - server architecture
+
+
+1 - 1 tier architecture
+
+when the presentation layer, application layer and data layer are available at the same place, we call it one-tier architecture.
+
+example - calculator (desktop application or standalone application), ms paint, notepad, wordpad.
+
+
+2 - 2 tier architecture
+
+when the presentation layer is available at one end
+and application/data layer is available at another end then we call it 2 tier architecture.
+
+example - pizza, macD, dominoz, KFC etc
+
+3 tier architecture -
+
+when the presenation layer is available at one place
+application layer is available at another place
+and data layer is available at 3rd place
+
+example - hrms, websites
+
+n-tier architecture
+
+when there are n number of presentation layer, application layer and data layer, we call it n tier architecture.
+
+reasons - why we need it and examples as well
+
+facebook, instagram, amazon, ebay etc
+
+Need of API?
+
+front end - html, css, angular, JS
+back end - java, python
+middleware - c++, JS
+
+1. to make systems developed in different languages communicate, we need API.
+2. For security purposes
+to maintain the security, 1 api is responsible for one peice of information which is easy to maintain and to transfer
+
+CRUD -
+create
+retrieve
+update
+delete
+
+front end - CRUD
+
+manual
+automate
+
+API testing -
+manual - postman
+automation - restassured
+
+non UI testing -
+
+swagger document - this document will give you the information of api and what to test over there
+
+API's which are hosted over the internet are called webservices.
+by default all webservices are API's but all API's are not webservices.
+
+
+DNS - domain name server
+
+why we need to test API?
+
+mumbai to NYC - 321
+california - greece - 321
+
+to identify the glitch in API, we need to test them
+
+webservices testing -
+
+there are 2 types of webservices -
+REST - representational state transfer
+SOAP - simple object access protocol
+
+REST is fast
+SOAP is slow
+REST is less secured
+SOAP is more secured
+
+REST webservices
+
+we are also going to work with rest web services
+
+what is URI?
+uniform resource identifier - in order to send the request we need complete URI
+
+client - request
+server - who will give the response to the request
+API
+
+Class 2 -
+
+recap -
+
+client - the one who sends the request
+server - the one who responds to the request
+Api - the middleman
+
+
+client - server architecture
+
+1 tier architecture
+-- calculator, notepad, wordpad etc.
+
+2 tier architecture
+-- pizza, dominoz etc
+
+3 tier architecture
+-- web applications, amazon, hrms syntax
+
+n tier architecture
+-- extended version of 3 tier arch.
+
+
+webservices - API's which are hosted over the internet
+
+REST
+SOAP
+
+the document which we need to work with during API testing is swagger document.
+
+Base URI - uniform resource identifier
+
+base URI = baseURL + endpoint
+
+
+What is HTTP?
+hypertext transfer protocol
+
+it allows us to access multiple websites and to do this operation it has its own methods/functions of it.
+
+C - create
+R - retrieve
+U - update
+D - delete
+
+POST - it is used to create a record in the system.
+GET - it is used to retrieve a record from the system.
+PUT - it is used to update a record in the system.
+DELETE - it is used to delete a record from the system.
+
+
+in postman, when we need to keep all the request at one place, we need collection.
+Collection shows all the request created in it.
+
+
+To perform CRUD operations in the system, we need admin user.
+
+To create admin user -
+
+BaseURI - base URL + endpoint
+
+baseURI - hrm.syntaxtechs.net/syntaxapi/api/createUser.php
+
+Type of Method - POST
+
+body/payload - when we need to add some record in the system, we send it in body.
+
+what is the format of the body?
+
+either JSON or XML.
+
+REST uses JSON format.
+
+what is JSON- javascript object notation - it is just a format of data which allows us to send information in the form of key value pair
+
+body/payload -
+
+{
+  "name": "adminbatch16",
+  "email": "admin@test.com",
+  "password": "Test@123"
+}
+
+header -
+content-type - application/json
+
+in API testing, the first thing we observe in response is status code.
+
+if we have post method -
+base uri
+type of method
+body/payload - in json format
+headers
+
+response status code - 201
+
+
+There are 2 types of API's.
+public API - everyone can use
+private API - only the registered users can use
+
+How API keeps security in private API.
+
+It is the process of -
+Authentication and Authorization
+
+
+
+API -
+	web services
+	normal API
+
+Webservices
+	REST
+	SOAP
+
+REST
+	public
+	private API
+
+authentication and authorization
+
+private API
+
+when the state of the server memory is set to true, we call it stateful application
+when you enter your credentials first time, server checks with DB and saved it in the memory
+
+Stateless application -
+when the server memory is set to false and database sends toke to use application for a specific amount of time.
+
+
+CREATE A TOKEN -
+
+baseURI = hrm.syntaxtechs.net/syntaxapi/api/generateToken.php
+
+Type of Method = POST
+
+body/payload
+
+{
+  "email": "admin@test.com",
+  "password": "Test@123"
+}
+
+header -
+content type = application/json
+
+Json Web Token (JWT)
+
+it is encrypted form of token -
+
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9
+eyJpYXQiOjE2OTAxMzMyNjcsImlzcyI6ImxvY2FsaG9zdCIsImV4cCI6MTY5MDE3NjQ2NywidXNlcklkIjoiNTYxNSJ9
+bSg_2ze1JX8TiY_QBU48NFHIIeZENbsgIF2T3pIHEfQ
+
+
+JWT has 3 parts in it -
+	Header - there are 2 things in it - type of token and  algorithm used to generate it
+	payload - issuer, time of issue, expiration time and userid
+	signature - the same message has been conveyed to client from server
+
+
+
+so far, we have created an admin user and we have generated token as well to perform crud operations
+
+Create an employee in HRMS db using API
+
+BaseURI = hrm.syntaxtechs.net/syntaxapi/api/createEmployee.php
+
+Type of Method - POST
+
+body/payload
+
+{
+  "emp_firstname": "justin",
+  "emp_lastname": "azzuri",
+  "emp_middle_name": "ms",
+  "emp_gender": "M",
+  "emp_birthday": "2000-07-21",
+  "emp_status": "happy",
+  "emp_job_title": "QA"
+}
+
+header -
+content-type = application/json
+
+authorization -
+bearer token - token value
+
+Class 3 -
+
+recap -
+
+	-- authentication and authorization process
+	-- statefull application and stateless application
+
+DB - session id - token/otp/magiclink
+
+JWT - json web token
+
+3 points in token -
+
+header
+payload
+signature
+
+bearer token
+
+JWT has 3 types -
+Bearer token
+MAC token
+Grants
+
+
+CRUD
+admin user -
+
+swagger - in this document, we can find all the details of API.
+
+in postman -
+we created collection -
+in collection we have written our requests -
+
+
+POST - 201
+
+base URI = base URL + endpoint
+
+creating an employee
+
+
+BaseURI = hrm.syntaxtechs.net/syntaxapi/api/createEmployee.php
+
+Type of Method - POST
+
+body/payload
+
+{
+  "emp_firstname": "justin",
+  "emp_lastname": "azzuri",
+  "emp_middle_name": "ms",
+  "emp_gender": "M",
+  "emp_birthday": "2000-07-21",
+  "emp_status": "happy",
+  "emp_job_title": "QA"
+}
+
+header -
+content-type = application/json
+
+authorization -
+bearer token - token value
+
+
+to identify the glitch is in API or DB
+we have to perform get operation after every request
+
+
+Base URI = hrm.syntaxtechs.net/syntaxapi/api/getOneEmployee.php
+
+Type of Method = GET
+
+employee_id = 88326A
+
+query parameter -
+it starts after ? in URI and comes in the form of key and value pair
+
+
+path parameter -
+
+it defines the path in URI
+
+to extend the path of URI we use this parameter
+
+to work with statefull application , we select basic auth and provide credentials there
+cookies - small block of data which is available at web server which is used to track your information
+
+
+
+GET job title -
+
+Base URI = hrm.syntaxtechs.net/syntaxapi/api/jobTitle.php
+Type of Method = GET
+
+Homework
+GET all employees
+GET employement status
+
+
+CRUD
+create
+retrieve
+update -
+
+PUT call - fully update
+
+Base URI = baseURL + endpoint
+hrm.syntaxtechs.net/syntaxapi/api/updateEmployee.php
+
+Type of method = PUT
+
+Body/payload =
+
+{
+  "employee_id": "88326A",
+  "emp_firstname": "chrisul",
+  "emp_lastname": "lohan",
+  "emp_middle_name": "sm",
+  "emp_gender": "F",
+  "emp_birthday": "2011-11-24",
+  "emp_status": "pathetic",
+  "emp_job_title": "no knowledge without college"
+}
 
 
 
 
+partially update employee -
+
+hrm.syntaxtechs.net/syntaxapi/api/updatePartialEmplyeesDetails.php
+
+Type of method = patch
+
+body/payload =
+
+{
+  "employee_id": "88326A",
+  "emp_middle_name": "ms"
+}
+
+header -
+content-type = application/json
+
+authorization = bearer token
 
 
 
+CREATE AN EMPLOYEE - GET THE CREATED EMPLOYEE
+Update an employee - Get the updated employee
+Partially updated the employee - Get partially updated employee
+
+
+DEV
+QA/TEST
+STAGE
+PROD
+
+CreateAdminUser = /createUser.php
+GenerateToken = /generateToken.php
+CreateEmployee = /createEmployee.php
+GetOneEmployee = /getOneEmployee.php
+GetAllEmployees = /getAllEmployees.php
+GetJobTitle = /jobTitle.php
+UpdateEmployee = /updateEmployee.php
+PartiallyUpdateEmployee = /updatePartialEmplyeesDetails.php
+
+class 4 -
+
+
+recap -
+
+JSON web tokens -
+Bearer
+MAC
+grants
+
+but we work with bearer token
+
+header
+payload
+signature
+
+CRUD operations -
+
+created an employee - Retrieve the created employee
+Updated the employee - retrieve the updated employee
+updated the partial employee details - retrieve partially updated employee
+deleted employee
 
 
 
+if we have to test the API's in multiple environments such as QA/Test, prod, staging
 
+providing environment variables -
+{{variableName}} - this is the syntax to be passed in the baseURI for the environment
+
+we added globals - these are the endpoints we have provided which we can pass in the form of parameters in URI - {{globalName}}
+
+JWT value in globals is Bearer tokenValue
+
+pass the JWT in headers in authorization
+select no auth in authroization tab and save the request.
+
+*USE THE SAME VARIABLE NAME AS YOU PASSED IN GLOBALS*
+*IF YOU DON"T DO IT, YOU WILL ALWAYS CRY*
+
+
+postman comes with inbuilt javascript API library
+
+Pm is the object of postman which allows us to use different methods available in this API
+
+pm.test
+pm.request
+pm.expect
+pm.globals
+pm.response
+
+postman uses chai assertion library - this library is easy to implement and easily readable and understandable
+
+in order to verify in postman - we can verify
+
+status code
+time of response
+body - any message, any key and any value
+response -
+
+-------------------------------API Automation------------------------------
+
+REST Assured -
+
+REST web service, the rest web service allows data to be sent in JSON format.
+
+Rest Assured is DSL (domain specific language)
+it is a java based library used to automate REST API's.
+
+Rest assured follows BDD approach
+
+given - prepare the request
+when - hit the endpoint/make a call/send a request
+then - assertions/verification
+
+java - already available
+rest assured - need to add (in pom.xml file, we have to add dependency)
+
+class 5
+recap -
+
+Rest Assured - java based library used to automate API
+it is DSL which allows us to send the data in JSON format
+
+in rest assured
+given - preparation of request
+when - hit the endpoint - send the request
+then - assertions/verifications
+
+rest assured
+json
+
+what is hamcrest -
+it is a popular framework, it helps us to create the matcher objects.
+mainly developers use it for unit testing and qa use it for integration test in java
+it  is mainly used with frameworks like testng, cucumber, junit, mockito etc.
+
+json dependency -
+
+JsonPath class - in this class we have jsonPath() method
 
 
 
