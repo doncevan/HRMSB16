@@ -22,8 +22,8 @@ public class HardCodedExamples {
     String baseURI = RestAssured.baseURI = "http://hrm.syntaxtechs.net/syntaxapi/api";
     // value of token should be same as postman
     String token = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9." +
-            "eyJpYXQiOjE2OTEwMTgxODgsImlzcyI6ImxvY2FsaG9zdCIsImV4cCI6MTY5MTA2MTM4OCwidXNlcklkIjoiNTYyNyJ9." +
-            "dyyfUK3g1PTDtxvy9GXULM4Fi7l53KHPY_1QygUYHak";
+            "eyJpYXQiOjE2OTEyNTg4MjksImlzcyI6ImxvY2FsaG9zdCIsImV4cCI6MTY5MTMwMjAyOSwidXNlcklkIjoiNTYyNyJ9." +
+            "zD2CaziT2QM_IGQ4bSAkgamAgJbP5LOj-CraRF_5Biw";
     static String employee_id;
 
     //in this method we are going to create an employee
@@ -34,7 +34,7 @@ public class HardCodedExamples {
         RequestSpecification request = given().header("Content-Type", "application/json").
                 header("Authorization", token).body("{\n" +
                         "  \"emp_firstname\": \"Jacob\",\n" +
-                        "  \"emp_lastname\": \"Vannelly\",\n" +
+                        "  \"emp_lastname\": \"Vanelly\",\n" +
                         "  \"emp_middle_name\": \"Bronson\",\n" +
                         "  \"emp_gender\": \"M\",\n" +
                         "  \"emp_birthday\": \"2003-03-20\",\n" +
@@ -103,14 +103,13 @@ public class HardCodedExamples {
         RequestSpecification request = given().header("Content-Type", "application/json").
                 header("Authorization", token).body("{\n" +
                         "  \"employee_id\": \"" + employee_id + "\",\n" +
-                        "  \"emp_status\": \"sleeping\",\n" +
-                        "  \"emp_job_title\": \"resident\"\n" +
+                        "  \"emp_firstname\": \"Brandosa\"\n" +
                         "}");
-        Response response = request.when().put("/updatePartialEmplyeesDetails.php");
+        Response response = request.when().patch("/updatePartialEmplyeesDetails.php");
         response.then().assertThat().statusCode(201);
         response.then().assertThat().body("Message", equalTo("Employee record updated successfully"));
         response.then().assertThat().header("Server", equalTo("Apache/2.4.39 (Win64) PHP/7.2.18"));
-        //response.prettyPrint();
+        response.prettyPrint();
         String actualId = response.jsonPath().getString("employee.employee_id");
         Assert.assertEquals(employee_id, actualId);
     }
