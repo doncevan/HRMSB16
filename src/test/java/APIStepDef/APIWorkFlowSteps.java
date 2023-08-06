@@ -77,17 +77,15 @@ public class APIWorkFlowSteps {
     @Then("this employee data at {string} object matches with the data used to create the employee")
     public void this_employee_data_at_object_matches_with_the_data_used_to_create_the_employee
             (String employeeObject, io.cucumber.datatable.DataTable dataTable) {
-        // Write code here that turns the phrase above into concrete actions
         List<Map<String, String>> expectedData = dataTable.asMaps();
-        //since we need whole object, we are calling .get method instead of .getString method
-        Map<String, String> actualData = response.body().jsonPath().get(employeeObject);
-
         for (Map<String, String> map : expectedData) {
             //to keep the order and to avoid duplicates
             Set<String> keys = map.keySet();
             for (String key : keys) {
                 //from the key, we will get value
                 String expectedValue = map.get(key);
+                //since we need whole object, we are calling .get method instead of .getString method
+                Map<String, String> actualData = response.body().jsonPath().get(employeeObject);
                 String actualValue = actualData.get(key);
                 Assert.assertEquals(expectedValue, actualValue);
             }
@@ -131,8 +129,8 @@ public class APIWorkFlowSteps {
     }
 
     @Then("the status code for partially updating an employee is {int}")
-    public void the_status_code_for_partially_updating_an_employee_is(int p_u_statusCode) {
-        response.then().assertThat().statusCode(p_u_statusCode);
+    public void the_status_code_for_partially_updating_an_employee_is(int statusCode) {
+        response.then().assertThat().statusCode(statusCode);
     }
 
     @Then("the partially updated employee contains key {string} and value {string}")
@@ -141,8 +139,8 @@ public class APIWorkFlowSteps {
     }
 
     @Then("the partially updated employee's id {string} is stored as a global variable")
-    public void the_partially_updated_employee_s_id_is_stored_as_a_global_variable(String p_u_empId) {
-        employee_id = response.jsonPath().getString(p_u_empId);
+    public void the_partially_updated_employee_s_id_is_stored_as_a_global_variable(String empId) {
+        employee_id = response.jsonPath().getString(empId);
         System.out.println(employee_id);
     }
 

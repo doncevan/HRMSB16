@@ -19,7 +19,7 @@ Feature: Syntax API HRMS Flow
     And the employee id "employee.employee_id" must match with globally stored employee id
     And this employee data at "employee" object matches with the data used to create the employee
       | emp_firstname | emp_lastname | emp_middle_name | emp_gender | emp_birthday | emp_status | emp_job_title |
-      | Jacob         | Bronson      | Van         | Male       | 2003-03-20   | working    | QA            |
+      | Jacob         | Bronson      | Van             | Male       | 2003-03-20   | working    | QA            |
 
   @json
   Scenario: Creating an employee using json body
@@ -37,7 +37,7 @@ Feature: Syntax API HRMS Flow
     And  the employee created contains key " Message" and value "Employee Created"
     And the employee id "Employee.employee_id" is stored as a global variable
 
-  @api
+  @dynamic
   Scenario: Partially updating an employee using highly dynamic scenario
     Given a request is prepared for partially updating an employee with data "Brandosa"
     When a PATCH call is made to partially update an employee
@@ -46,7 +46,7 @@ Feature: Syntax API HRMS Flow
     And the partially updated employee's id "employee.employee_id" is stored as a global variable
 
 
-  @api
+  @dynamic
   Scenario: Get the partially updated employee
     Given a request is prepared for retrieving a partially updated employee
     When  a GET call is made to retrieve the partially updated employee
@@ -54,4 +54,4 @@ Feature: Syntax API HRMS Flow
     And the employee id "employee.employee_id" must match with globally stored employee id
     And this employee data at "employee" object matches with the data used to partially update the employee
       | emp_firstname | emp_lastname | emp_middle_name | emp_gender | emp_birthday | emp_status | emp_job_title |
-      | Brandosa      | Bronson      | Van         | Male       | 2003-03-20   | working    | QA            |
+      | Brandosa      | Bronson      | Van             | Male       | 2003-03-20   | working    | QA            |
