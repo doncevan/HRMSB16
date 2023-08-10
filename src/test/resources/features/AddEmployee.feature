@@ -15,7 +15,7 @@ Feature: Adding employee in HRMS application
 
   @sample
   Scenario: Adding one employee from feature file
-    When user enters "adam" and "lovely" and "farwa"
+    When user enters "Abel" and "Ava" and "Abrams"
     And user clicks on save button
     Then employee added successfully
 

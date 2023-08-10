@@ -1,4 +1,4 @@
-Feature: Adding new job in HRMS application
+Feature: Adding new jobs in HRMS
 
   Background:
     When user enters valid admin username and password
@@ -7,11 +7,12 @@ Feature: Adding new job in HRMS application
 
   @addJob
   Scenario: User adds a new job
-    When  user clicks on the admin button
-    And  user clicks on job
-    And user clicks on Job Title
-    And  use clicks on the add button
-    And  user enters the job "Java Instructor"title
-    And  user enters the job description "Teaches Java"
-    And clicks on the save button
-    Then  verify data is stored properly in database
+    * user clicks on the admin button
+    * user click on the job
+    * user Click on Job Title
+    * user clicks on the add button
+    * user enters job "Java For You" title
+    * user enters job description "Always with java"
+    * user enters job note "Java programming notes"
+    * user clicks on the save button
+    * verify data is stored properly in database
