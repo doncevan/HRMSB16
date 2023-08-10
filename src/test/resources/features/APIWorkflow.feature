@@ -29,7 +29,7 @@ Feature: Syntax API HRMS Flow
     And  the employee created contains key " Message" and value "Employee Created"
     And the employee id "Employee.employee_id" is stored as a global variable
 
-  @dynamic
+  @dynamic1
   Scenario: Creating an employee using highly dynamic scenario
     Given a request is prepared for creating an employee with data "Jacob", "Bronson", "Van", "M", "2003-03-20", "working", "QA"
     When a POST call is made to create an employee
