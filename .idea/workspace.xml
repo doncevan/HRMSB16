@@ -218,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691635016843</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Updated MySQL dependency">
+      <created>1692195802626</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1692195802626</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -227,7 +234,8 @@
     <MESSAGE value="API additions" />
     <MESSAGE value="API being added to framework" />
     <MESSAGE value="Updating the Framework with API features" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating the Framework with API features" />
+    <MESSAGE value="Updated MySQL dependency" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated MySQL dependency" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
