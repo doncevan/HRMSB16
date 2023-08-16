@@ -3,9 +3,9 @@ package steps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.apache.log4j.xml.DOMConfigurator;
+//import org.apache.log4j.xml.DOMConfigurator;
+import org.apache.logging.log4j.core.config.Configurator;
 import org.junit.Assert;
-import pages.LoginPage;
 import utils.CommonMethods;
 import utils.ConfigReader;
 import utils.Log;
@@ -35,7 +35,8 @@ public class LoginSteps extends CommonMethods {
         //   passwordField.sendKeys(ConfigReader.getPropertyValue("password"));
         ///we are calling DOMConfigurator which is asking for the file which we used
         //to integrate logs in our project
-        DOMConfigurator.configure("log4j.xml");
+        //DOMConfigurator.configure("log4j.xml");
+        Configurator.initialize(null, "log4j.xml");
         Log.startTestCase("My batch 16 test case starts here");
         sendText(ConfigReader.getPropertyValue("username"), loginPage.usernameField);
         Log.info("my username has been entered");

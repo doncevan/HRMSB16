@@ -59,7 +59,7 @@
       <recent name="runners" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.APIRunner">
+  <component name="RunManager" selected="Maven.HRMSB16 [test]">
     <configuration name="APIRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HRMSB16" />
       <extension name="coverage">
@@ -86,22 +86,6 @@
       <option name="PACKAGE_NAME" value="API" />
       <option name="MAIN_CLASS_NAME" value="API.HardCodedExamples" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HardCodedExamples.e_partiallyUpdateEmployee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HRMSB16" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="API.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="API" />
-      <option name="MAIN_CLASS_NAME" value="API.HardCodedExamples" />
-      <option name="METHOD_NAME" value="e_partiallyUpdateEmployee" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -136,13 +120,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HRMSB16 [test]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="test" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Maven.HRMSB16 [test]" />
         <item itemvalue="JUnit.APIRunner" />
         <item itemvalue="JUnit.RunnerClass" />
         <item itemvalue="JUnit.RegressionRunner" />
         <item itemvalue="JUnit.HardCodedExamples" />
-        <item itemvalue="JUnit.HardCodedExamples.e_partiallyUpdateEmployee" />
       </list>
     </recent_temporary>
   </component>
@@ -225,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692195802626</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Updated POM.xml">
+      <created>1692196518802</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1692196518802</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -235,7 +251,8 @@
     <MESSAGE value="API being added to framework" />
     <MESSAGE value="Updating the Framework with API features" />
     <MESSAGE value="Updated MySQL dependency" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated MySQL dependency" />
+    <MESSAGE value="Updated POM.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated POM.xml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
