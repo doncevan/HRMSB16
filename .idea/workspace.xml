@@ -265,7 +265,23 @@
       <option name="project" value="LOCAL" />
       <updated>1692203632845</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Replaced Log class after upgrading log4j from version 1 to 2">
+      <option name="closed" value="true" />
+      <created>1693092416443</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1693092416443</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Replaced Log class after upgrading log4j from version 1 to 2">
+      <option name="closed" value="true" />
+      <created>1693092440597</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1693092440597</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="UnknownFeatures">
