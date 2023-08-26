@@ -21,7 +21,7 @@ Feature: Syntax API HRMS Flow
       | emp_firstname | emp_lastname | emp_middle_name | emp_gender | emp_birthday | emp_status | emp_job_title |
       | Jacob         | Bronson      | Van             | Male       | 2003-03-20   | working    | QA            |
 
-  @json
+  @api
   Scenario: Creating an employee using json body
     Given a request is prepared for creating an employee using json payload
     When a POST call is made to create an employee
@@ -29,7 +29,7 @@ Feature: Syntax API HRMS Flow
     And  the employee created contains key " Message" and value "Employee Created"
     And the employee id "Employee.employee_id" is stored as a global variable
 
-  @dynamic
+  @api
   Scenario: Creating an employee using highly dynamic scenario
     Given a request is prepared for creating an employee with data "Jacob", "Bronson", "Van", "M", "2003-03-20", "working", "QA"
     When a POST call is made to create an employee
@@ -37,7 +37,7 @@ Feature: Syntax API HRMS Flow
     And  the employee created contains key " Message" and value "Employee Created"
     And the employee id "Employee.employee_id" is stored as a global variable
 
-  @dynamic
+  @api
   Scenario: Partially updating an employee using highly dynamic scenario
     Given a request is prepared for partially updating an employee with data "Brandosa"
     When a PATCH call is made to partially update an employee
@@ -46,7 +46,7 @@ Feature: Syntax API HRMS Flow
     And the partially updated employee's id "employee.employee_id" is stored as a global variable
 
 
-  @dynamic
+  @api
   Scenario: Get the partially updated employee
     Given a request is prepared for retrieving a partially updated employee
     When  a GET call is made to retrieve the partially updated employee

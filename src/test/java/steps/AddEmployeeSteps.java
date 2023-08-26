@@ -105,10 +105,10 @@ public class AddEmployeeSteps extends CommonMethods {
 
     @When("user adds multiple employees using excel from {string} and verify it")
     public void user_adds_multiple_employees_using_excel_from_and_verify_it
-            (String sheetName) throws InterruptedException {
-        //here we are getting the data from excel file using parameters
+            (String Sheet1) throws InterruptedException {
+        //here we are getting the data from Excel file using parameters
         List<Map<String, String>> newEmployees =
-                ExcelReader.read(sheetName, Constants.EXCEL_READER_PATH);
+                ExcelReader.read(Sheet1, Constants.EXCEL_READER_PATH);
 
         Iterator<Map<String, String>> itr = newEmployees.iterator();
 

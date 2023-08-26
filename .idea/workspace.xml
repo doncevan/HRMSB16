@@ -24,6 +24,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2RUW8gf2jJOmVOaKaCjDRtRJXrD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -35,7 +38,8 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/magre/IdeaProjects/SeleniumProject&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/magre/IdeaProjects/HRMSB16/src/test/resources/testdata&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/magre/IdeaProjects/HRMSB16/src/main/java/org/syntax/Main.java&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
@@ -51,6 +55,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\magre\IdeaProjects\HRMSB16\src\test\resources\testdata" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\magre\IdeaProjects\HRMSB16\src\test\resources\testdata" />
     </key>
@@ -59,7 +66,27 @@
       <recent name="runners" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.HRMSB16 [test]">
+  <component name="RunManager" selected="JUnit.RunnerClass">
+    <configuration name="Scenario: adding multiple employees using excel file" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/AddEmployee.feature" />
+      <option name="GLUE" value="steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="HRMSB16" />
+      <option name="NAME_FILTER" value="^adding multiple employees using excel file$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^adding multiple employees using excel file$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: adding multiple employees using excel file" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="APIRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HRMSB16" />
       <extension name="coverage">
@@ -70,21 +97,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="runners" />
       <option name="MAIN_CLASS_NAME" value="runners.APIRunner" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HardCodedExamples" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HRMSB16" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="API.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="API" />
-      <option name="MAIN_CLASS_NAME" value="API.HardCodedExamples" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -115,6 +127,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="runners" />
       <option name="MAIN_CLASS_NAME" value="runners.RunnerClass" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -126,6 +139,7 @@
         <option name="myRunnerSettings" />
         <option name="myRunnerParameters">
           <MavenRunnerParameters>
+            <option name="cmdOptions" />
             <option name="profiles">
               <set />
             </option>
@@ -138,6 +152,9 @@
             <option name="profilesMap">
               <map />
             </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
             <option name="resolveToWorkspace" value="false" />
             <option name="workingDirPath" value="$PROJECT_DIR$" />
           </MavenRunnerParameters>
@@ -147,11 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Maven.HRMSB16 [test]" />
-        <item itemvalue="JUnit.APIRunner" />
         <item itemvalue="JUnit.RunnerClass" />
+        <item itemvalue="Maven.HRMSB16 [test]" />
         <item itemvalue="JUnit.RegressionRunner" />
-        <item itemvalue="JUnit.HardCodedExamples" />
+        <item itemvalue="JUnit.APIRunner" />
+        <item itemvalue="Cucumber Java.Scenario: adding multiple employees using excel file" />
       </list>
     </recent_temporary>
   </component>
@@ -241,8 +258,18 @@
       <option name="project" value="LOCAL" />
       <updated>1692196518802</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Replaced Log class after upgrading log4j from version 1 to 2">
+      <created>1692203632845</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1692203632845</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="second" />
@@ -252,7 +279,8 @@
     <MESSAGE value="Updating the Framework with API features" />
     <MESSAGE value="Updated MySQL dependency" />
     <MESSAGE value="Updated POM.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated POM.xml" />
+    <MESSAGE value="Replaced Log class after upgrading log4j from version 1 to 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Replaced Log class after upgrading log4j from version 1 to 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

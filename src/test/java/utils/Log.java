@@ -9,7 +9,7 @@ public class Log {
 
     // Initialize Log4j logs
 
-   // private static final Logger Log = Logger.getLogger(Log.class);
+    //private static final Logger Log = Logger.getLogger(Log.class);
     private static final Logger Log = LogManager.getLogger(Log.class);
 
     // This is to print log for the beginning of the test case, as we usually run so many test cases as a test suite

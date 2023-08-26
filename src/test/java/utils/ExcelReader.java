@@ -18,7 +18,7 @@ public class ExcelReader {
         List<Map<String, String>> excelData = new ArrayList<>();
         try {
             fileInputStream = new FileInputStream(path);
-            // that special call which knows how to read the data from excel files
+            // that special call which knows how to read the data from Excel files
             XSSFWorkbook xssfWorkbook = new XSSFWorkbook(fileInputStream);
             Sheet sheet = xssfWorkbook.getSheet(sheetName);
             //this row is just for keys

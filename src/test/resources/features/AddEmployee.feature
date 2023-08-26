@@ -40,7 +40,7 @@ Feature: Adding employee in HRMS application
 
   @excel
   Scenario: adding multiple employees using excel file
-    When user adds multiple employees using excel from "EmployeeDataBatch16" and verify it
+    When user adds multiple employees using excel from "HRMSEmployeesData" and verify it
 
   @Db
   Scenario: Adding one employee from feature file
