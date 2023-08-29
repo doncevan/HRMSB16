@@ -64,16 +64,15 @@
       <recent name="runners" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RunnerClass">
-    <configuration name="Scenario: negative login test" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.RegressionRunner">
+    <configuration name="Feature: AddJob" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Login.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/AddJob.feature" />
       <option name="GLUE" value="steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="HRMSB16" />
-      <option name="NAME_FILTER" value="^negative login test$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^negative login test$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: negative login test" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: AddJob" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -147,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RunnerClass" />
-        <item itemvalue="JUnit.FailedRunner" />
         <item itemvalue="JUnit.RegressionRunner" />
+        <item itemvalue="JUnit.RunnerClass" />
+        <item itemvalue="Cucumber Java.Feature: AddJob" />
+        <item itemvalue="JUnit.FailedRunner" />
         <item itemvalue="JUnit.APIRunner" />
-        <item itemvalue="Cucumber Java.Scenario: negative login test" />
       </list>
     </recent_temporary>
   </component>
@@ -304,7 +303,23 @@
       <option name="project" value="LOCAL" />
       <updated>1693317208232</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Updated ChromeDriver for headless run">
+      <option name="closed" value="true" />
+      <created>1693318177760</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1693318177760</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Downgraded pom.xml maven compiler to version 11, higher versions don't work on jenkins">
+      <option name="closed" value="true" />
+      <created>1693318467304</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1693318467304</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -321,7 +336,8 @@
     <MESSAGE value="Replaced Log class after upgrading log4j from version 1 to 2" />
     <MESSAGE value="Some updates and new Excel file data" />
     <MESSAGE value="Updated ChromeDriver for headless run" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated ChromeDriver for headless run" />
+    <MESSAGE value="Downgraded pom.xml maven compiler to version 11, higher versions don't work on jenkins" />
+    <option name="LAST_COMMIT_MESSAGE" value="Downgraded pom.xml maven compiler to version 11, higher versions don't work on jenkins" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
