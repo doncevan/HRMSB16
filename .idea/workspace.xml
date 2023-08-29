@@ -296,7 +296,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693316756794</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Updated ChromeDriver for headless run">
+      <option name="closed" value="true" />
+      <created>1693317208232</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1693317208232</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -312,7 +320,8 @@
     <MESSAGE value="Updated POM.xml" />
     <MESSAGE value="Replaced Log class after upgrading log4j from version 1 to 2" />
     <MESSAGE value="Some updates and new Excel file data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some updates and new Excel file data" />
+    <MESSAGE value="Updated ChromeDriver for headless run" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated ChromeDriver for headless run" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
