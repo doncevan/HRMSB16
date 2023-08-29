@@ -10,46 +10,34 @@ import utils.Constants;
 import utils.DBUtils;
 import utils.ExcelReader;
 
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
 public class AddEmployeeSteps extends CommonMethods {
 
-    String firstName;
-    String middleName;
-    String lastName;
+    String fnFirstName;
+    String fnMiddleName;
+    String fnLastName;
     String empId;
 
     @When("user clicks on PIM option")
     public void user_clicks_on_pim_option() {
-        //  WebElement pimOption = driver.findElement(By.id("menu_pim_viewPimModule"));
-        //   pimOption.click();
         click(dashboardPage.pimOption);
     }
 
     @When("user clicks on add employee button")
     public void user_clicks_on_add_employee_button() {
-        //   WebElement addEmployeeBUtton = driver.findElement(By.id("menu_pim_addEmployee"));
-        // addEmployeeBUtton.click();
         click(dashboardPage.addEmployeeButton);
     }
 
     @When("user enters firstname and lastname")
     public void user_enters_firstname_and_lastname() {
-        //  WebElement firstNameTextField = driver.findElement(By.id("firstName"));
-        // firstNameTextField.sendKeys("aendro");
-        sendText("aendro", addEmployeePage.firstNameField);
-
-        // WebElement lastNameTextField = driver.findElement(By.id("lastName"));
-        // lastNameTextField.sendKeys("farewell");
-        sendText("farewell", addEmployeePage.lastNameField);
+        sendText("Aziza", addEmployeePage.firstNameField);
+        sendText("Abas", addEmployeePage.lastNameField);
     }
 
     @When("user clicks on save button")
     public void user_clicks_on_save_button() {
-        //   WebElement saveButton = driver.findElement(By.id("btnSave"));
-        // saveButton.click();
         click(addEmployeePage.saveButton);
     }
 
@@ -61,9 +49,9 @@ public class AddEmployeeSteps extends CommonMethods {
     @When("user enters {string} and {string} and {string}")
     public void user_enters_and_and(String firstName, String middleName, String lastName) {
 
-        this.firstName = firstName;
-        this.middleName = middleName;
-        this.lastName = lastName;
+        this.fnFirstName = firstName;
+        this.fnMiddleName = middleName;
+        this.fnLastName = lastName;
         sendText(firstName, addEmployeePage.firstNameField);
         sendText(middleName, addEmployeePage.middleNameField);
         sendText(lastName, addEmployeePage.lastNameField);
@@ -105,18 +93,15 @@ public class AddEmployeeSteps extends CommonMethods {
 
     @When("user adds multiple employees using excel from {string} and verify it")
     public void user_adds_multiple_employees_using_excel_from_and_verify_it
-            (String Sheet1) throws InterruptedException {
+            (String sheetName) throws InterruptedException {
         //here we are getting the data from Excel file using parameters
         List<Map<String, String>> newEmployees =
-                ExcelReader.read(Sheet1, Constants.EXCEL_READER_PATH);
-
-        Iterator<Map<String, String>> itr = newEmployees.iterator();
+                ExcelReader.read(sheetName, Constants.EXCEL_READER_PATH);
 
         //it will check whether we have new element/value or not
-        while (itr.hasNext()) {
+        for (Map<String, String> mapNewEmp : newEmployees) {
 
             //in this map, we have data from every single employee one by one it will give us that data
-            Map<String, String> mapNewEmp = itr.next();
             //we are filling the employee data now using mapNewEmp variable
             //BATCH 16, KEYS WHAT WE ARE PASSING HERE SHOULD MATCH WITH THE KEYS IN EXCEL
             sendText(mapNewEmp.get("firstName"), addEmployeePage.firstNameField);
@@ -136,7 +121,7 @@ public class AddEmployeeSteps extends CommonMethods {
             String empIdValue = addEmployeePage.employeeIdField.getAttribute("value");
             Assert.assertTrue(addEmployeePage.saveButton.isDisplayed());
             click(addEmployeePage.saveButton);
-            Thread.sleep(3000);
+            Thread.sleep(2000);
             //we have to verify that the employee has been added
             click(dashboardPage.empListOption);
             //searching the employee using emp id which we just got
@@ -145,12 +130,12 @@ public class AddEmployeeSteps extends CommonMethods {
 
             //print the value from the table row
             List<WebElement> rowData = driver.findElements(By.xpath("//table[@id='resultTable']/tbody/tr"));
-            for (int i = 0; i < rowData.size(); i++) {
+            for (WebElement rowDatum : rowData) {
                 System.out.println("I am inside the loop");
                 //it will return one by one all the data from the row
-                String rowText = rowData.get(i).getText();
+                String rowText = rowDatum.getText();
                 //it will print the complete row data
-                //output of this will be empId firstname middlename lastname
+                //output of this will be empId firstName middleName lastName
                 System.out.println(rowText);
                 //we have to verify this data against the data coming from Excel
 
@@ -160,25 +145,27 @@ public class AddEmployeeSteps extends CommonMethods {
                 Assert.assertEquals(expectedData, rowText);
                 //you can use below code too to verify the data
                 //  Assert.assertTrue(expectedData.equals(rowText));
-
             }
             //to add more employees we need to click on add employee button
             click(dashboardPage.addEmployeeButton);
         }
     }
 
+
     @Then("verify employee is stored in database")
     public void verifyEmployeeIsStoredInDatabase() {
         String query = "select emp_firstName,emp_middle_name,emp_lastname from hs_hr_employees where employee_id=" + empId + ";";
         System.out.println(query);
         List<Map<String, String>> mapList = DBUtils.fetch(query);
-        Map<String, String> firstRow=mapList.get(0);
-        String dbFirstName= firstRow.get("emp_firstName");
-        String dbMiddleName= firstRow.get("emp_middle_name");
-        String dbLastName= firstRow.get("emp_lastname");
+        Map<String, String> firstRow = mapList.get(0);
+        String dbFirstName = firstRow.get("emp_firstName");
+        String dbMiddleName = firstRow.get("emp_middle_name");
+        String dbLastName = firstRow.get("emp_lastname");
 
-        Assert.assertEquals("FirstName from frontend does not match the firstname from database",firstName, dbFirstName);
-        Assert.assertEquals("MiddleName from frontend does not match the middlename from database",middleName, dbMiddleName);
-        Assert.assertEquals("LastName from frontend does not match the lastname from database",lastName, dbLastName);
+        Assert.assertEquals("FirstName from frontend does not match the firstname from database", fnFirstName, dbFirstName);
+        Assert.assertEquals("MiddleName from frontend does not match the MiddleName from database", fnMiddleName, dbMiddleName);
+        Assert.assertEquals("LastName from frontend does not match the LastName from database", fnLastName, dbLastName);
+
+
     }
 }

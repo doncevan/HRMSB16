@@ -25,7 +25,7 @@ Feature: Login related scenarios
     And user clicks on login button
     Then error message is displayed
 
-  @negative
+  @negative @sprint1
   Scenario Outline: negative login test
     When user enters "<username>" and "<password>" and verifying the "<error>" for the combinations
     Examples:

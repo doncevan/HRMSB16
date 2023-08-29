@@ -26,25 +26,25 @@ Feature: Adding employee in HRMS application
     Then employee added successfully
     Examples:
       | firstName | middleName | lastName |
-      | leny      | darzi      | fraud    |
-      | paster    | surma      | shalli   |
-      | sana      | caty       | aim      |
+      | Ana       | Maria      | Abb      |
+      | Ariana    | Zoia       | Aaw      |
+      | Ael       | Caty       | Abe      |
 
   @datatable
   Scenario: adding multiple employees using data table
     When user enters firstname and middlename and lastname and verify employee has added
       | firstName | middleName | lastName |
-      | zara      | ms         | zaca     |
-      | mary      | ms         | django   |
-      | sadam     | ms         | adam     |
+      | Ana       | Maria      | Abb      |
+      | Ariana    | Zoia       | Aaw      |
+      | Ael       | Caty       | Abe      |
 
   @excel
   Scenario: adding multiple employees using excel file
-    When user adds multiple employees using excel from "HRMSEmployeesData" and verify it
+    When user adds multiple employees using excel from "EmployeeDataBatch16" and verify it
 
   @Db
   Scenario: Adding one employee from feature file
-    When user enters "adam" and "lovely" and "farwa"
+    When user enters "adam" and "Aunt" and "Aaw"
     And user clicks on save button
     Then employee added successfully
     Then  verify employee is stored in database
