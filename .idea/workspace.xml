@@ -26,7 +26,9 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2RUW8gf2jJOmVOaKaCjDRtRJXrD" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Remove" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -64,7 +66,7 @@
       <recent name="runners" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RegressionRunner">
+  <component name="RunManager" selected="Cucumber Java.Scenario: adding multiple employees using scenario outline">
     <configuration name="Feature: AddJob" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/AddJob.feature" />
@@ -73,6 +75,26 @@
       <module name="HRMSB16" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
       <option name="SUGGESTED_NAME" value="Feature: AddJob" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: adding multiple employees using scenario outline" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/AddEmployee.feature" />
+      <option name="GLUE" value="steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="HRMSB16" />
+      <option name="NAME_FILTER" value="^adding multiple employees using scenario outline$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^adding multiple employees using scenario outline$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: adding multiple employees using scenario outline" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -94,21 +116,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="runners" />
       <option name="MAIN_CLASS_NAME" value="runners.APIRunner" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FailedRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HRMSB16" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="runners.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="runners" />
-      <option name="MAIN_CLASS_NAME" value="runners.FailedRunner" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -146,11 +153,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RegressionRunner" />
+        <item itemvalue="Cucumber Java.Scenario: adding multiple employees using scenario outline" />
         <item itemvalue="JUnit.RunnerClass" />
-        <item itemvalue="Cucumber Java.Feature: AddJob" />
-        <item itemvalue="JUnit.FailedRunner" />
+        <item itemvalue="JUnit.RegressionRunner" />
         <item itemvalue="JUnit.APIRunner" />
+        <item itemvalue="Cucumber Java.Feature: AddJob" />
       </list>
     </recent_temporary>
   </component>
@@ -319,7 +326,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693318467304</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Updated RegressionRunner">
+      <option name="closed" value="true" />
+      <created>1693321450716</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1693321450716</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -337,7 +352,8 @@
     <MESSAGE value="Some updates and new Excel file data" />
     <MESSAGE value="Updated ChromeDriver for headless run" />
     <MESSAGE value="Downgraded pom.xml maven compiler to version 11, higher versions don't work on jenkins" />
-    <option name="LAST_COMMIT_MESSAGE" value="Downgraded pom.xml maven compiler to version 11, higher versions don't work on jenkins" />
+    <MESSAGE value="Updated RegressionRunner" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated RegressionRunner" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
