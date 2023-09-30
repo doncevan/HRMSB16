@@ -84,26 +84,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.HardCodedExamples">
-    <configuration name="Scenario: Creating the employee using API" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/APIWorkflow.feature" />
-      <option name="GLUE" value="APIStepDef steps" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="HRMSB16" />
-      <option name="NAME_FILTER" value="^Creating the employee using API$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Creating the employee using API$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Creating the employee using API" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Scenario: adding multiple employees using excel file" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/AddEmployee.feature" />
@@ -154,6 +134,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HardCodedExamples.a_createEmployee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HRMSB16" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="API.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="API" />
+      <option name="MAIN_CLASS_NAME" value="API.HardCodedExamples" />
+      <option name="METHOD_NAME" value="a_createEmployee" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RunnerClass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HRMSB16" />
       <extension name="coverage">
@@ -172,10 +168,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.HardCodedExamples" />
+        <item itemvalue="JUnit.HardCodedExamples.a_createEmployee" />
         <item itemvalue="JUnit.APIRunner" />
         <item itemvalue="JUnit.RunnerClass" />
         <item itemvalue="Cucumber Java.Scenario: adding multiple employees using excel file" />
-        <item itemvalue="Cucumber Java.Scenario: Creating the employee using API" />
       </list>
     </recent_temporary>
   </component>
@@ -368,7 +364,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693335791385</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Updated dependencies and Excel file">
+      <option name="closed" value="true" />
+      <created>1696104705252</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1696104705252</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -394,7 +398,8 @@
     <MESSAGE value="Downgraded pom.xml maven compiler to version 11, higher versions don't work on jenkins" />
     <MESSAGE value="Updated RegressionRunner" />
     <MESSAGE value="Updated data files for jenkins" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated data files for jenkins" />
+    <MESSAGE value="Updated dependencies and Excel file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated dependencies and Excel file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
