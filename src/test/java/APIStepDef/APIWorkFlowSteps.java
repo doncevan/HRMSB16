@@ -38,6 +38,7 @@ public class APIWorkFlowSteps {
     @Then("the status code for creating an employee is {int}")
     public void the_status_code_for_creating_an_employee_is(int statusCode) {
         response.then().assertThat().statusCode(statusCode);
+        System.out.println(statusCode);
     }
 
     @Then("the employee created contains key {string} and value {string}")

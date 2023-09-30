@@ -11,7 +11,7 @@ Feature: Adding new jobs in HRMS
     * user click on the job
     * user Click on Job Title
     * user clicks on the add button
-    * user enters job "Bull" title
+    * user enters job "Frog" title
     * user enters job description "Always with java"
     * user enters job note "Java programming notes"
     * user clicks on the save button

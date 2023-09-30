@@ -21,9 +21,8 @@ public class HardCodedExamples {
 
     String baseURI = RestAssured.baseURI = "http://hrm.syntaxtechs.net/syntaxapi/api";
     // value of token should be same as postman
-    String token = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9." +
-            "eyJpYXQiOjE2OTEyNTg4MjksImlzcyI6ImxvY2FsaG9zdCIsImV4cCI6MTY5MTMwMjAyOSwidXNlcklkIjoiNTYyNyJ9." +
-            "zD2CaziT2QM_IGQ4bSAkgamAgJbP5LOj-CraRF_5Biw";
+    String token = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2OTYwOTI2OTMsImlzcyI6ImxvY2FsaG9zdCIsImV4cCI6MTY5NjEzNTg5MywidXNlcklkIjoiNTYyNyJ9.05MhPuRZTHy8WPqPzUN-r2FvzOgbdTBdSAiYQyy_sXY";
+
     static String employee_id;
 
     //in this method we are going to create an employee
