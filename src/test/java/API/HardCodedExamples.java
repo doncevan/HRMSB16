@@ -31,16 +31,15 @@ public class HardCodedExamples {
     public void a_createEmployee() {
         //preparing the request
         RequestSpecification request = given().header("Content-Type", "application/json").
-                header("Authorization", token).body("""
-                        {
-                          "emp_firstname": "Jacob",
-                          "emp_lastname": "Vanelly",
-                          "emp_middle_name": "Bronson",
-                          "emp_gender": "M",
-                          "emp_birthday": "2003-03-20",
-                          "emp_status": "working",
-                          "emp_job_title": "QA"
-                        }""");
+                header("Authorization", token).body("{\n" +
+                                                    "  \"emp_firstname\": \"Jacob\",\n" +
+                                                    "  \"emp_lastname\": \"Vanelly\",\n" +
+                                                    "  \"emp_middle_name\": \"Bronson\",\n" +
+                                                    "  \"emp_gender\": \"M\",\n" +
+                                                    "  \"emp_birthday\": \"2003-03-20\",\n" +
+                                                    "  \"emp_status\": \"working\",\n" +
+                                                    "  \"emp_job_title\": \"QA\"\n" +
+                                                    "}");
         //hitting the endpoint
         Response response = request.when().post("/createEmployee.php");
         //verifying the response
