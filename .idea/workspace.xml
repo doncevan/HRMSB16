@@ -58,7 +58,7 @@
     &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/magre/IdeaProjects/Amazon_Project&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/magre/IdeaProjects/HRMSB16/src/main/java/org/syntax/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.42146596&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
@@ -83,7 +83,7 @@
       <recent name="runners" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HardCodedExamples">
+  <component name="RunManager" selected="Cucumber Java.Scenario: adding multiple employees using excel file">
     <configuration name="Scenario: adding multiple employees using excel file" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/AddEmployee.feature" />
@@ -167,11 +167,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Scenario: adding multiple employees using excel file" />
         <item itemvalue="JUnit.HardCodedExamples" />
         <item itemvalue="JUnit.HardCodedExamples.a_createEmployee" />
         <item itemvalue="JUnit.APIRunner" />
         <item itemvalue="JUnit.RunnerClass" />
-        <item itemvalue="Cucumber Java.Scenario: adding multiple employees using excel file" />
       </list>
     </recent_temporary>
   </component>
@@ -380,7 +380,23 @@
       <option name="project" value="LOCAL" />
       <updated>1696105022432</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Updated dependencies and Excel file">
+      <option name="closed" value="true" />
+      <created>1696114069716</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1696114069716</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Updated dependencies and Excel file">
+      <option name="closed" value="true" />
+      <created>1696114076721</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1696114076721</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="UnknownFeatures">
