@@ -114,6 +114,7 @@
                     <includes>
                         <include>**/*RunnerClass</include>
                         <include>**/*APIRunner</include>
+                        <include>**/*RegressionRunner</include>
                     </includes>
                 </configuration>
             </plugin>
