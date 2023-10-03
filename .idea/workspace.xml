@@ -174,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Scenario: adding multiple employees using excel file" />
-        <item itemvalue="JUnit.HardCodedExamples" />
-        <item itemvalue="JUnit.HardCodedExamples.a_createEmployee" />
-        <item itemvalue="JUnit.APIRunner" />
         <item itemvalue="JUnit.RunnerClass" />
+        <item itemvalue="JUnit.HardCodedExamples.a_createEmployee" />
+        <item itemvalue="JUnit.HardCodedExamples" />
+        <item itemvalue="JUnit.APIRunner" />
+        <item itemvalue="Cucumber Java.Scenario: adding multiple employees using excel file" />
       </list>
     </recent_temporary>
   </component>
@@ -427,7 +427,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696211723299</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Updated Excel file">
+      <option name="closed" value="true" />
+      <created>1696212409393</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1696212409393</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="UnknownFeatures">
