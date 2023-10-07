@@ -29,11 +29,11 @@ Feature: Login related scenarios
   Scenario Outline: negative login test
     When user enters "<username>" and "<password>" and verifying the "<error>" for the combinations
     Examples:
-      | username | password | error |
-      |admin     |fkfkkkj   |Invalid credentials|
-      |admin1    |Hum@nhrm123|Invalid credentials|
-      |          |Hum@nhrm123|Username cannot be empty|
-      |admin     |           |Password cannot be empty|
+      | username | password    | error                    |
+      | admin    | fkfkkkj     | Invalid credentials      |
+      | admin1   | Hum@nhrm123 | Invalid credentials      |
+      |          | Hum@nhrm123 | Username cannot be empty |
+      | admin    |             | Password cannot be empty |
 
 
 

@@ -4,7 +4,6 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import utils.CommonMethods;
 import utils.DBUtils;
-
 import java.util.List;
 import java.util.Map;
 
@@ -61,13 +60,13 @@ public class AddJobSteps extends CommonMethods {
     public void verify_data_is_stored_properly_in_database() {
         String query = "select * from ohrm_job_title where job_title='" + jTitleFE + "' and job_description='" + jDescFE + "' and note='" + jNoteFE + "';";
         List<Map<String, String>> data = DBUtils.fetch(query);
-        Map<String,String> firstROw=data.get(0);
-        String jTitleBE=firstROw.get("job_title");
-        String jDescBE=firstROw.get("job_description");
-        String jNoteBE=firstROw.get("note");
+        Map<String, String> firstROw = data.get(0);
+        String jTitleBE = firstROw.get("job_title");
+        String jDescBE = firstROw.get("job_description");
+        String jNoteBE = firstROw.get("note");
 
-        Assert.assertEquals(jTitleFE,jTitleBE);
-        Assert.assertEquals(jDescFE,jDescBE);
-        Assert.assertEquals(jNoteFE,jNoteBE);
+        Assert.assertEquals(jTitleFE, jTitleBE);
+        Assert.assertEquals(jDescFE, jDescBE);
+        Assert.assertEquals(jNoteFE, jNoteBE);
     }
 }

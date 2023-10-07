@@ -115,6 +115,7 @@
                         <include>**/*RunnerClass</include>
                         <include>**/*APIRunner</include>
                         <include>**/*RegressionRunner</include>
+                        <include>**/*HardCodedExamples</include>
                     </includes>
                 </configuration>
             </plugin>

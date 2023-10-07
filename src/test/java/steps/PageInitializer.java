@@ -12,11 +12,11 @@ public class PageInitializer {
     public static JobPage jobPage;
 
 
-    public static void initializePageObjects(){
+    public static void initializePageObjects() {
         loginPage = new LoginPage();
         dashboardPage = new DashboardPage();
         addEmployeePage = new AddEmployeePage();
         employeeSearchPage = new EmployeeSearchPage();
-        jobPage=new JobPage();
+        jobPage = new JobPage();
     }
 }

@@ -5,7 +5,6 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -16,7 +15,7 @@ public class ExcelReader {
 
     public static List<Map<String, String>> read(String sheetName, String path) {
         FileInputStream fileInputStream = null;
-        List<Map<String,String>> excelData = new ArrayList<>();
+        List<Map<String, String>> excelData = new ArrayList<>();
         try {
             fileInputStream = new FileInputStream(path);
             // that special call which knows how to read the data from excel files

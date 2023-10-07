@@ -165,7 +165,5 @@ public class AddEmployeeSteps extends CommonMethods {
         Assert.assertEquals("FirstName from frontend does not match the firstname from database", fnFirstName, dbFirstName);
         Assert.assertEquals("MiddleName from frontend does not match the MiddleName from database", fnMiddleName, dbMiddleName);
         Assert.assertEquals("LastName from frontend does not match the LastName from database", fnLastName, dbLastName);
-
-
     }
 }

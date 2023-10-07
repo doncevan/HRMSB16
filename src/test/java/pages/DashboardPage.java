@@ -23,7 +23,6 @@ public class DashboardPage extends CommonMethods {
     @FindBy(id = "menu_admin_viewJobTitleList")
     public WebElement adminJobJobTitleButton;
 
-
     public DashboardPage() {
         PageFactory.initElements(driver, this);
     }

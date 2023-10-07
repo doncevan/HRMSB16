@@ -6,22 +6,20 @@ import org.openqa.selenium.support.PageFactory;
 import utils.CommonMethods;
 
 public class JobPage extends CommonMethods {
-    @FindBy(id="btnAdd")
+    @FindBy(id = "btnAdd")
     public WebElement addButton;
 
-    @FindBy(id="jobTitle_jobTitle")
+    @FindBy(id = "jobTitle_jobTitle")
     public WebElement jobTitleF;
-    @FindBy(id="jobTitle_jobDescription")
+    @FindBy(id = "jobTitle_jobDescription")
     public WebElement jobDescF;
-    @FindBy(id="jobTitle_note")
+    @FindBy(id = "jobTitle_note")
     public WebElement jobNoteF;
 
-    @FindBy(id="btnSave")
+    @FindBy(id = "btnSave")
     public WebElement jobSvBtn;
 
-
-
-    public JobPage(){
-        PageFactory.initElements(driver,this);
+    public JobPage() {
+        PageFactory.initElements(driver, this);
     }
 }

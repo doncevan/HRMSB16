@@ -8,22 +8,22 @@ import utils.CommonMethods;
 public class Hooks extends CommonMethods {
 
     @Before
-    public void start(){
+    public void start() {
         openBrowserAndNavigateToURL();
     }
 
     @After
-    public void end(Scenario scenario){
+    public void end(Scenario scenario) {
         //we need this variable because my ss method returns array of byte
         byte[] pic;
         //here we are going to capture the screenshot and attaching it to the report
-        if(scenario.isFailed()) {
+        if (scenario.isFailed()) {
             pic = takeScreenshot("failed/" + scenario.getName());
-        }else {
+        } else {
             pic = takeScreenshot("passed/" + scenario.getName());
         }
         //attach this screenshot in the report
-        scenario.attach(pic,"image/png",scenario.getName());
+        scenario.attach(pic, "image/png", scenario.getName());
         closeBrowser();
     }
 }
