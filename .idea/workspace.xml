@@ -90,7 +90,7 @@
       <recent name="runners" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HardCodedExamples">
+  <component name="RunManager" selected="Cucumber Java.Scenario: adding multiple employees using excel file">
     <configuration name="Feature: APIWorkflow" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/APIWorkflow.feature" />
@@ -110,17 +110,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="APIRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: adding multiple employees using data table" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/AddEmployee.feature" />
+      <option name="GLUE" value="steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="HRMSB16" />
+      <option name="NAME_FILTER" value="^adding multiple employees using data table$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^adding multiple employees using data table$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: adding multiple employees using data table" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="runners.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="runners" />
-      <option name="MAIN_CLASS_NAME" value="runners.APIRunner" />
-      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: adding multiple employees using excel file" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/AddEmployee.feature" />
+      <option name="GLUE" value="steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="HRMSB16" />
+      <option name="NAME_FILTER" value="^adding multiple employees using excel file$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^adding multiple employees using excel file$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: adding multiple employees using excel file" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -136,22 +161,6 @@
       <option name="PACKAGE_NAME" value="API" />
       <option name="MAIN_CLASS_NAME" value="API.HardCodedExamples" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HardCodedExamples.a_createEmployee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HRMSB16" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="API.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="API" />
-      <option name="MAIN_CLASS_NAME" value="API.HardCodedExamples" />
-      <option name="METHOD_NAME" value="a_createEmployee" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -173,11 +182,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Scenario: adding multiple employees using excel file" />
+        <item itemvalue="Cucumber Java.Scenario: adding multiple employees using data table" />
         <item itemvalue="JUnit.HardCodedExamples" />
         <item itemvalue="Cucumber Java.Feature: APIWorkflow" />
         <item itemvalue="JUnit.RunnerClass" />
-        <item itemvalue="JUnit.HardCodedExamples.a_createEmployee" />
-        <item itemvalue="JUnit.APIRunner" />
       </list>
     </recent_temporary>
   </component>
@@ -474,7 +483,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696706364487</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Updated Excel file">
+      <option name="closed" value="true" />
+      <created>1696707161644</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1696707161644</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="UnknownFeatures">
