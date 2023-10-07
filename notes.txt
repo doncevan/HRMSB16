@@ -921,33 +921,3 @@ class 6 -
     writing the scenario in feature file
     create step definition
     write code in step definition
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
