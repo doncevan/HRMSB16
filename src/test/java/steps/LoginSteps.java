@@ -15,22 +15,12 @@ public class LoginSteps extends CommonMethods {
     public void user_is_navigated_to_hrms_application() {
         //to launch Chrome browser
         openBrowserAndNavigateToURL();
+        Configurator.initialize(null, "log4j.xml");
+        Log.startTestCase("My batch 16 test case starts here");
     }
 
     @When("user enters valid admin username and password")
     public void user_enters_valid_admin_username_and_password() {
-        //creating the object of the class to access all the web elements from it
-        // LoginPage loginPage = new LoginPage();
-        // WebElement usernameField = driver.findElement(By.id("txtUsername"));
-        //  WebElement passwordField = driver.findElement(By.id("txtPassword"));
-        //entering the credentials
-        //  usernameField.sendKeys(ConfigReader.getPropertyValue("username"));
-        //   passwordField.sendKeys(ConfigReader.getPropertyValue("password"));
-        ///we are calling DOMConfigurator which is asking for the file which we used
-        //to integrate logs in our project
-        //DOMConfigurator.configure("log4j.xml");
-        Configurator.initialize(null, "log4j.xml");
-        Log.startTestCase("My batch 16 test case starts here");
         sendText(ConfigReader.getPropertyValue("username"), loginPage.usernameField);
         Log.info("my username has been entered");
         sendText(ConfigReader.getPropertyValue("password"), loginPage.passwordField);
@@ -74,5 +64,6 @@ public class LoginSteps extends CommonMethods {
         String errorMessageActual = loginPage.errorMessageField.getText();
         //error message coming from feature file too which we can compare
         Assert.assertEquals("value does not match", errorMessageExpected, errorMessageActual);
+        Log.endTestCase("This test case ends here");
     }
 }

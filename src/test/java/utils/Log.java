@@ -15,11 +15,7 @@ public class Log {
 
         Log.info("****************************************************************************************");
 
-        Log.info("****************************************************************************************");
-
         Log.info("$$$$$$$$$$$$$$$$$$$$$                 " + sTestCaseName + "       $$$$$$$$$$$$$$$$$$$$$$$$$");
-
-        Log.info("****************************************************************************************");
 
         Log.info("****************************************************************************************");
 
@@ -27,18 +23,12 @@ public class Log {
 
     //This is to print log for the ending of the test case
 
-    public static void endTestCase(String sTestCaseName) {
+    public static void endTestCase(String eTestCaseName) {
+        Log.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 
-        Log.info("Elenaproblemsolutionstatementclassesfocusqueryresolutionhoperegretinstructorcrying             " + "-E---N---D-" + "             XXXXXXXXXXXXXXXXXXXXXX");
+        Log.info("################            " + eTestCaseName + "             #################");
 
-        Log.info("Chaymae");
-
-        Log.info("Chaymae");
-
-        Log.info("Chaymae");
-
-        Log.info("Chaymae");
-
+        Log.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
     }
 
     // Need to create these methods, so that they can be called
