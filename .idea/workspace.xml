@@ -55,29 +55,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/magre/IdeaProjects/Test_Docker/welcome-to-docker&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/magre/IdeaProjects/HRMSB16/src/main/java/org/syntax/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.42146596&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.preview.features.used": "true",
+    "last_opened_file_path": "C:/Users/magre/IdeaProjects/Test_Docker/welcome-to-docker",
+    "onboarding.tips.debug.path": "C:/Users/magre/IdeaProjects/HRMSB16/src/main/java/org/syntax/Main.java",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.42146596",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;,
-      &quot;module&quot;,
-      &quot;repository&quot;
+  "keyToStringList": {
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\magre\IdeaProjects\HRMSB16\src\test\resources\testdata" />
@@ -90,7 +90,7 @@
       <recent name="runners" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.APIRunner">
+  <component name="RunManager" selected="JUnit.RegressionRunner">
     <configuration name="Feature: Login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Login.feature" />
@@ -173,8 +173,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.APIRunner" />
         <item itemvalue="JUnit.RegressionRunner" />
+        <item itemvalue="JUnit.APIRunner" />
         <item itemvalue="JUnit.HardCodedExamples" />
         <item itemvalue="JUnit.HardCodedExamples.a_createEmployee" />
         <item itemvalue="Cucumber Java.Feature: Login" />
@@ -538,7 +538,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696954953490</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Updated Excel file">
+      <option name="closed" value="true" />
+      <created>1697068309329</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1697068309329</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="UnknownFeatures">
