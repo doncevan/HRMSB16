@@ -1,5 +1,6 @@
 package API;
 
+import io.cucumber.java.en.Given;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -21,25 +22,40 @@ public class HardCodedExamples {
 
     String baseURI = RestAssured.baseURI = "http://hrm.syntaxtechs.net/syntaxapi/api";
     // value of token should be same as postman
-    String token = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2OTcxMzI4NjIsImlzcyI6ImxvY2FsaG9zdCIsImV4cCI6MTY5NzE3NjA2MiwidXNlcklkIjoiNTYyNyJ9.7a8r6lc_CfVfyHMO9iNm5Bmq89bhj8e-Qh3j60sbZro";
+    //String token = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2OTcxMzI4NjIsImlzcyI6ImxvY2FsaG9zdCIsImV4cCI6MTY5NzE3NjA2MiwidXNlcklkIjoiNTYyNyJ9.7a8r6lc_CfVfyHMO9iNm5Bmq89bhj8e-Qh3j60sbZro";
 
     static String employee_id;
+    static String token;
+
+    @Test
+    public void a_generateToken() {
+        RequestSpecification request = given().
+                header("Content-Type", "application/json").
+                body("{\n" +
+                        "  \"email\": \"myvanelly@test.com\",\n" +
+                        "  \"password\": \"06032008\"\n" +
+                        "}");
+        Response response = request.when().post("/generateToken.php");
+        //response.prettyPrint();
+        token = "Bearer " + response.jsonPath().getString("token");
+        System.out.println(token);
+    }
 
     //in this method we are going to create an employee
     //we need headers, body to prepare the request
     @Test
-    public void a_createEmployee() {
+    public void b_createEmployee() {
         //preparing the request
         RequestSpecification request = given().header("Content-Type", "application/json").
                 header("Authorization", token).body("{\n" +
-                                                    "  \"emp_firstname\": \"Jacob\",\n" +
-                                                    "  \"emp_lastname\": \"Vanelly\",\n" +
-                                                    "  \"emp_middle_name\": \"Bronson\",\n" +
-                                                    "  \"emp_gender\": \"M\",\n" +
-                                                    "  \"emp_birthday\": \"2003-03-20\",\n" +
-                                                    "  \"emp_status\": \"working\",\n" +
-                                                    "  \"emp_job_title\": \"QA\"\n" +
-                                                    "}");
+                        "  \"emp_firstname\": \"Jacob\",\n" +
+                        "  \"emp_lastname\": \"Vanelly\",\n" +
+                        "  \"emp_middle_name\": \"Bronson\",\n" +
+                        "  \"emp_gender\": \"M\",\n" +
+                        "  \"emp_birthday\": \"2003-03-20\",\n" +
+                        "  \"emp_status\": \"working\",\n" +
+                        "  \"emp_job_title\": \"QA\"\n" +
+                        "}");
         //hitting the endpoint
         Response response = request.when().post("/createEmployee.php");
         //verifying the response
@@ -58,7 +74,7 @@ public class HardCodedExamples {
     }
 
     @Test
-    public void b_getCreatedEmployee() {
+    public void c_getCreatedEmployee() {
         RequestSpecification request = given().header("Authorization", token).queryParam("employee_id", employee_id);
         Response response = request.when().get("/getOneEmployee.php");
         response.then().assertThat().statusCode(200);
@@ -69,7 +85,7 @@ public class HardCodedExamples {
     }
 
     @Test
-    public void c_updateEmployee() {
+    public void d_updateEmployee() {
         RequestSpecification request = given().header("Content-Type", "application/json").
                 header("Authorization", token).body("{\n" +
                         "  \"employee_id\": \"" + employee_id + "\",\n" +
@@ -87,7 +103,7 @@ public class HardCodedExamples {
     }
 
     @Test
-    public void d_getUpdatedEmployee() {
+    public void e_getUpdatedEmployee() {
         RequestSpecification request = given().header("Authorization", token).queryParam("employee_id", employee_id);
         Response response = request.when().get("/getOneEmployee.php");
         response.then().assertThat().statusCode(200);
@@ -98,7 +114,7 @@ public class HardCodedExamples {
     }
 
     @Test
-    public void e_partiallyUpdateEmployee() {
+    public void f_partiallyUpdateEmployee() {
         RequestSpecification request = given().header("Content-Type", "application/json").
                 header("Authorization", token).body("{\n" +
                         "  \"employee_id\": \"" + employee_id + "\",\n" +
@@ -114,7 +130,7 @@ public class HardCodedExamples {
     }
 
     @Test
-    public void f_getPartiallyUpdatedEmployee() {
+    public void h_getPartiallyUpdatedEmployee() {
         RequestSpecification request = given().header("Authorization", token).queryParam("employee_id", employee_id);
         Response response = request.when().get("/getOneEmployee.php");
         response.then().assertThat().statusCode(200);
@@ -124,4 +140,3 @@ public class HardCodedExamples {
         Assert.assertEquals(employee_id, tempEmpId);
     }
 }
-

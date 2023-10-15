@@ -27,8 +27,8 @@ public class CommonMethods extends PageInitializer {
         switch (ConfigReader.getPropertyValue("browser")) {
             case "chrome":
                 ChromeOptions ops = new ChromeOptions();
-                ops.addArguments("--no-sandbox");
-                ops.addArguments("--remote-allow-origins=*");
+                //ops.addArguments("--no-sandbox");
+                //ops.addArguments("--remote-allow-origins=*");
                 ops.addArguments("--headless=new");
                 driver = new ChromeDriver(ops);
                 break;
@@ -55,16 +55,15 @@ public class CommonMethods extends PageInitializer {
     }
 
     public static WebDriverWait getWait() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        return wait;
+        return new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    public static void waitForClickability(WebElement element) {
+    public static void waitForClickAbility(WebElement element) {
         getWait().until(ExpectedConditions.elementToBeClickable(element));
     }
 
     public static void click(WebElement element) {
-        waitForClickability(element);
+        waitForClickAbility(element);
         element.click();
     }
 
