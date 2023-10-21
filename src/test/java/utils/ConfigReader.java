@@ -25,4 +25,3 @@ public class ConfigReader {
         return prop.getProperty(key);
     }
 }
-

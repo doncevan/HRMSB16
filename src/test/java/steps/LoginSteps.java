@@ -15,7 +15,7 @@ public class LoginSteps extends CommonMethods {
     public void user_is_navigated_to_hrms_application() {
         //to launch Chrome browser
         openBrowserAndNavigateToURL();
-        Configurator.initialize(null, "log4j.xml");
+        Configurator.initialize(null, "log4j2.xml");
         Log.startTestCase("My batch 16 test case starts here");
     }
 

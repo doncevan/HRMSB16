@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration>
     <Appenders>
-        <File name="fileAppender" fileName="logfile.log">
+        <File name="fileAppender" fileName="target/logfile.log">
             <PatternLayout pattern="%d %-5p [%c{1}] %m %n"/>
         </File>
     </Appenders>

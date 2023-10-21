@@ -66,8 +66,8 @@ public class AddEmployeeSteps extends CommonMethods {
         sendText(lastName, addEmployeePage.lastNameField);
     }
 
-    @When("user enters firstname and middlename and lastname and verify employee has added")
-    public void user_enters_firstname_and_middlename_and_lastname_and_verify_employee_has_added
+    @When("user enters firstName and middleName and lastName and verify employee has added")
+    public void user_enters_firstName_and_middleName_and_lastName_and_verify_employee_has_added
             (io.cucumber.datatable.DataTable dataTable) {
         //we need list of maps to get multiple values from datatable which is coming
         // from feature file
@@ -86,7 +86,7 @@ public class AddEmployeeSteps extends CommonMethods {
             sendText(lastNameValue, addEmployeePage.lastNameField);
             click(addEmployeePage.saveButton);
             //after adding one employee, we will add another employee
-            //for this, we are clicking on add employee button in the loop ittself
+            //for this, we are clicking on add employee button in the loop itself
             click(dashboardPage.addEmployeeButton);
         }
     }

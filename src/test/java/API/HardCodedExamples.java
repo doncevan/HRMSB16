@@ -1,6 +1,5 @@
 package API;
 
-import io.cucumber.java.en.Given;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -21,9 +20,6 @@ public class HardCodedExamples {
     //base URI = base URL
 
     String baseURI = RestAssured.baseURI = "http://hrm.syntaxtechs.net/syntaxapi/api";
-    // value of token should be same as postman
-    //String token = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2OTcxMzI4NjIsImlzcyI6ImxvY2FsaG9zdCIsImV4cCI6MTY5NzE3NjA2MiwidXNlcklkIjoiNTYyNyJ9.7a8r6lc_CfVfyHMO9iNm5Bmq89bhj8e-Qh3j60sbZro";
-
     static String employee_id;
     static String token;
 
