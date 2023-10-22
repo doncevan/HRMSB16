@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         //features we use to provide the path of all the feature files
         features = "src/test/resources/features/",
         //glue keyword we use to provide the package where step definitions are available
-        glue = "APIStepDef",
+        glue = "steps",
         //when dry run is true, it stops actual execution, it quickly scans all the steps and will
         //provide the missing step definition
         dryRun = false,

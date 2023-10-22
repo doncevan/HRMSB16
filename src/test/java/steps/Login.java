@@ -9,7 +9,7 @@ import utils.CommonMethods;
 import utils.ConfigReader;
 import utils.Log;
 
-public class LoginSteps extends CommonMethods {
+public class Login extends CommonMethods {
 
     @Given("user is navigated to HRMS application")
     public void user_is_navigated_to_hrms_application() {
@@ -34,7 +34,7 @@ public class LoginSteps extends CommonMethods {
 
     @Then("user is successfully logged in the application")
     public void user_is_successfully_logged_in_the_application() {
-        System.out.println("test case passed");
+        System.out.println("The user successfully logged in");
     }
 
     @When("user enters ess username and password")

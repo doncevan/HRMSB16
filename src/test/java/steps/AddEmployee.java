@@ -13,12 +13,13 @@ import utils.ExcelReader;
 import java.util.List;
 import java.util.Map;
 
-public class AddEmployeeSteps extends CommonMethods {
+public class AddEmployee extends CommonMethods {
 
     String fnFirstName;
     String fnMiddleName;
     String fnLastName;
     String empId;
+    String random;
 
     @When("user clicks on PIM option")
     public void user_clicks_on_pim_option() {
@@ -94,13 +95,14 @@ public class AddEmployeeSteps extends CommonMethods {
     @When("user adds multiple employees using excel from {string} and verify it")
     public void user_adds_multiple_employees_using_excel_from_and_verify_it
             (String sheetName) throws InterruptedException {
+
         //here we are getting the data from Excel file using parameters
         List<Map<String, String>> newEmployees =
                 ExcelReader.read(sheetName, Constants.EXCEL_READER_PATH);
 
         //it will check whether we have new element/value or not
         for (Map<String, String> mapNewEmp : newEmployees) {
-
+            String random = randomAlphabets();
             //in this map, we have data from every single employee one by one it will give us that data
             //we are filling the employee data now using mapNewEmp variable
             //BATCH 16, KEYS WHAT WE ARE PASSING HERE SHOULD MATCH WITH THE KEYS IN EXCEL
@@ -113,9 +115,10 @@ public class AddEmployeeSteps extends CommonMethods {
             if (!addEmployeePage.checkBoxLocator.isSelected()) {
                 click(addEmployeePage.checkBoxLocator);
             }
-            sendText(mapNewEmp.get("username"), addEmployeePage.usernameTextFieldBox);
+            sendText(mapNewEmp.get("username") + random, addEmployeePage.usernameTextFieldBox);
             sendText(mapNewEmp.get("password"), addEmployeePage.passwordTextFieldBox);
             sendText(mapNewEmp.get("confirmPassword"), addEmployeePage.confirmPasswordBox);
+
 
             //here we are fetching the employee id from the UI using get attribute method
             String empIdValue = addEmployeePage.employeeIdField.getAttribute("value");
@@ -148,6 +151,31 @@ public class AddEmployeeSteps extends CommonMethods {
             }
             //to add more employees we need to click on add employee button
             click(dashboardPage.addEmployeeButton);
+            //Thread.sleep(2000);
+        }
+    }
+
+    @Then("user deletes multiple employees")
+    public void userDeletesMultipleEmployees() throws InterruptedException {
+        click(dashboardPage.adminButton);
+        List<WebElement> userRowData = driver.findElements(By.xpath("//table[@id='resultTable']/tbody/tr"));
+        int counter = 0;
+        for (WebElement userRowDatum : userRowData) {
+            if (counter == 3){
+                break;
+            }
+            click(dashboardPage.searchUserName);
+            System.out.println("I am inside the users table");
+            //it will return one by one all the data from the row
+            //Thread.sleep(10000);
+            click(dashboardPage.checkBox);
+            //String rowText = userRowDatum.getText();
+            //it will print the complete row data
+            //System.out.println(rowText);
+            click(dashboardPage.deleteBtn);
+            click(dashboardPage.confirmDelBtn);
+            Thread.sleep(5000);
+            counter++;
         }
     }
 

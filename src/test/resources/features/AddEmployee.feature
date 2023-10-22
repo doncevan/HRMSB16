@@ -41,6 +41,7 @@ Feature: Adding employee in HRMS application
   @excel
   Scenario: adding multiple employees using excel file
     When user adds multiple employees using excel from "EmployeeDataBatch16" and verify it
+    Then  user deletes multiple employees
 
   @Db
   Scenario: Adding one employee from feature file

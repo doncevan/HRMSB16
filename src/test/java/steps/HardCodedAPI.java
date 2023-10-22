@@ -1,4 +1,4 @@
-package API;
+package steps;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
@@ -12,7 +12,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.equalTo;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class HardCodedExamples {
+public class HardCodedAPI {
 
     //baseURI = baseURL + endpoint
     //given - preparation

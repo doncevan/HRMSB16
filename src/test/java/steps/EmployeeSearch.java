@@ -4,7 +4,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.CommonMethods;
 
-public class EmployeeSearchSteps extends CommonMethods {
+public class EmployeeSearch extends CommonMethods {
 
     @When("user clicks on PIM option and Employee list option")
     public void user_clicks_on_pim_option_and_employee_list_option() {

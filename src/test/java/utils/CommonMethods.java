@@ -18,6 +18,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
+import java.util.Random;
 
 public class CommonMethods extends PageInitializer {
     public static WebDriver driver;
@@ -29,7 +30,7 @@ public class CommonMethods extends PageInitializer {
                 ChromeOptions ops = new ChromeOptions();
                 //ops.addArguments("--no-sandbox");
                 //ops.addArguments("--remote-allow-origins=*");
-                ops.addArguments("--headless=new");
+                //ops.addArguments("--headless=new");
                 driver = new ChromeDriver(ops);
                 break;
             case "firefox":
@@ -107,5 +108,22 @@ public class CommonMethods extends PageInitializer {
         SimpleDateFormat sdf = new SimpleDateFormat(pattern);
         //this line is going to return the formatted date
         return sdf.format(date);
+    }
+
+    public static String randomAlphabets() {
+        Random random = new Random();
+        int alphabetCount = 26;
+        char[] alphabets = new char[alphabetCount];
+        for (int i = 0; i < alphabetCount; i++) {
+            alphabets[i] = (char) ('a' + i);
+        }
+
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < 4; i++) {
+            int index = random.nextInt(alphabetCount);
+            char randomAlphabet = alphabets[index];
+            result.append(randomAlphabet);
+        }
+        return result.toString();
     }
 }

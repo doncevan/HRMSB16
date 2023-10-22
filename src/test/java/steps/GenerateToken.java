@@ -1,4 +1,4 @@
-package APIStepDef;
+package steps;
 
 import io.cucumber.java.en.Given;
 import io.restassured.RestAssured;
@@ -7,7 +7,7 @@ import io.restassured.specification.RequestSpecification;
 
 import static io.restassured.RestAssured.given;
 
-public class GenerateTokenStep {
+public class GenerateToken {
 
     String baseURI = RestAssured.baseURI = "http://hrm.syntaxtechs.net/syntaxapi/api";
     public static String token;

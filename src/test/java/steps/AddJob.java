@@ -7,7 +7,7 @@ import utils.DBUtils;
 import java.util.List;
 import java.util.Map;
 
-public class AddJobSteps extends CommonMethods {
+public class AddJob extends CommonMethods {
 
     String jTitleFE;
     String jDescFE;

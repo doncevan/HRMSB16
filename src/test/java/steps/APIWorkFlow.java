@@ -1,4 +1,4 @@
-package APIStepDef;
+package steps;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -16,7 +16,7 @@ import java.util.Set;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.equalTo;
 
-public class APIWorkFlowSteps {
+public class APIWorkFlow {
     RequestSpecification request;
     Response response;
     public static String employee_id;
@@ -25,7 +25,7 @@ public class APIWorkFlowSteps {
     @Given("a request is prepared for creating an employee")
     public void a_request_is_prepared_for_creating_an_employee() {
         request = given().header(APIConstants.HEADER_CONTENT_TYPE_KEY, APIConstants.HEADER_CONTENT_TYPE_VALUE).
-                header(APIConstants.HEADER_AUTHORIZATION_KEY, GenerateTokenStep.token).
+                header(APIConstants.HEADER_AUTHORIZATION_KEY, GenerateToken.token).
                 body(APIPayloadConstants.createEmployeePayload());
     }
 
@@ -55,7 +55,7 @@ public class APIWorkFlowSteps {
     //-----------------------------Retrieving the created employee-----------------------------
     @Given("a request is prepared for retrieving an employee")
     public void a_request_is_prepared_for_retrieving_an_employee() {
-        request = given().header(APIConstants.HEADER_AUTHORIZATION_KEY, GenerateTokenStep.token)
+        request = given().header(APIConstants.HEADER_AUTHORIZATION_KEY, GenerateToken.token)
                 .queryParam("employee_id", employee_id);
     }
 
@@ -98,7 +98,7 @@ public class APIWorkFlowSteps {
     public void a_request_is_prepared_for_creating_an_employee_using_json_payload() {
         request = given().header(APIConstants.HEADER_CONTENT_TYPE_KEY,
                         APIConstants.HEADER_CONTENT_TYPE_VALUE).
-                header(APIConstants.HEADER_AUTHORIZATION_KEY, GenerateTokenStep.token).
+                header(APIConstants.HEADER_AUTHORIZATION_KEY, GenerateToken.token).
                 body(APIPayloadConstants.createEmployeeJsonPayload());
     }
 
@@ -108,7 +108,7 @@ public class APIWorkFlowSteps {
             (String f_n, String l_n, String m_n, String gender, String DOB, String status, String jobTitle) {
         request = given().header(APIConstants.HEADER_CONTENT_TYPE_KEY,
                         APIConstants.HEADER_CONTENT_TYPE_VALUE).
-                header(APIConstants.HEADER_AUTHORIZATION_KEY, GenerateTokenStep.token).
+                header(APIConstants.HEADER_AUTHORIZATION_KEY, GenerateToken.token).
                 body(APIPayloadConstants.createEmployeeJsonPayloadDynamic(f_n, l_n, m_n, gender, DOB, status, jobTitle));
     }
 
@@ -119,7 +119,7 @@ public class APIWorkFlowSteps {
     (String f_n) {
         request = given().header(APIConstants.HEADER_CONTENT_TYPE_KEY,
                         APIConstants.HEADER_CONTENT_TYPE_VALUE).
-                header(APIConstants.HEADER_AUTHORIZATION_KEY, GenerateTokenStep.token).
+                header(APIConstants.HEADER_AUTHORIZATION_KEY, GenerateToken.token).
                 body(APIPayloadConstants.partiallyUpdateEmployeeJsonPayloadDynamic(employee_id, f_n));
     }
 
@@ -148,7 +148,7 @@ public class APIWorkFlowSteps {
     //--------------------Retrieving a partially updated employee------------------------------
     @Given("a request is prepared for retrieving a partially updated employee")
     public void a_request_is_prepared_for_retrieving_a_partially_updated_employee() {
-        request = given().header(APIConstants.HEADER_AUTHORIZATION_KEY, GenerateTokenStep.token)
+        request = given().header(APIConstants.HEADER_AUTHORIZATION_KEY, GenerateToken.token)
                 .queryParam("employee_id", employee_id);
     }
 
