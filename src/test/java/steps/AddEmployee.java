@@ -5,11 +5,14 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.CommonMethods;
 import utils.Constants;
 import utils.DBUtils;
 import utils.ExcelReader;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.Map;
 
@@ -28,7 +31,7 @@ public class AddEmployee extends CommonMethods {
 
     @When("user clicks on add employee button")
     public void user_clicks_on_add_employee_button() {
-        click(dashboardPage.addEmployeeButton);
+        click(addEmployeePage.addEmployeeButton);
     }
 
     @When("user enters firstname and lastname")
@@ -88,7 +91,7 @@ public class AddEmployee extends CommonMethods {
             click(addEmployeePage.saveButton);
             //after adding one employee, we will add another employee
             //for this, we are clicking on add employee button in the loop itself
-            click(dashboardPage.addEmployeeButton);
+            click(addEmployeePage.addEmployeeButton);
         }
     }
 
@@ -124,9 +127,9 @@ public class AddEmployee extends CommonMethods {
             String empIdValue = addEmployeePage.employeeIdField.getAttribute("value");
             Assert.assertTrue(addEmployeePage.saveButton.isDisplayed());
             click(addEmployeePage.saveButton);
-            Thread.sleep(2000);
-            //we have to verify that the employee has been added
+            click(dashboardPage.pimOption);
             click(dashboardPage.empListOption);
+            //we have to verify that the employee has been added
             //searching the employee using emp id which we just got
             sendText(empIdValue, employeeSearchPage.idTextField);
             click(employeeSearchPage.searchButton);
@@ -150,31 +153,28 @@ public class AddEmployee extends CommonMethods {
                 //  Assert.assertTrue(expectedData.equals(rowText));
             }
             //to add more employees we need to click on add employee button
-            click(dashboardPage.addEmployeeButton);
-            //Thread.sleep(2000);
+            click(addEmployeePage.addEmployeeButton);
         }
+        click(dashboardPage.adminButton);
     }
 
     @Then("user deletes multiple employees")
     public void userDeletesMultipleEmployees() throws InterruptedException {
-        click(dashboardPage.adminButton);
-        List<WebElement> userRowData = driver.findElements(By.xpath("//table[@id='resultTable']/tbody/tr"));
         int counter = 0;
-        for (WebElement userRowDatum : userRowData) {
-            if (counter == 3){
+        while (counter < 3) {
+            List<WebElement> userRowData = driver.findElements(By.xpath("//table[@id='resultTable']/tbody/tr"));
+            if (userRowData.isEmpty()) {
                 break;
             }
-            click(dashboardPage.searchUserName);
-            System.out.println("I am inside the users table");
-            //it will return one by one all the data from the row
-            //Thread.sleep(10000);
+            WebElement userRowDatum = userRowData.get(0);
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//table[@id='resultTable']/tbody/tr[1]/td[2]")));
+            System.out.println("This user will be deleted!");
+            String userRowText = userRowDatum.getText();
+            System.out.println(userRowText);
             click(dashboardPage.checkBox);
-            //String rowText = userRowDatum.getText();
-            //it will print the complete row data
-            //System.out.println(rowText);
             click(dashboardPage.deleteBtn);
             click(dashboardPage.confirmDelBtn);
-            Thread.sleep(5000);
             counter++;
         }
     }

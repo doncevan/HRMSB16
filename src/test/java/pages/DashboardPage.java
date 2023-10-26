@@ -13,9 +13,6 @@ public class DashboardPage extends CommonMethods {
     @FindBy(id = "menu_pim_viewEmployeeList")
     public WebElement empListOption;
 
-    @FindBy(id = "menu_pim_addEmployee")
-    public WebElement addEmployeeButton;
-
     @FindBy(id = "menu_admin_viewAdminModule")
     public WebElement adminButton;
     @FindBy(id = "searchSystemUser_userName")

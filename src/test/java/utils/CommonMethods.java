@@ -1,16 +1,11 @@
 package utils;
 
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.*;
 import steps.PageInitializer;
 
 import java.io.File;
@@ -30,7 +25,7 @@ public class CommonMethods extends PageInitializer {
                 ChromeOptions ops = new ChromeOptions();
                 //ops.addArguments("--no-sandbox");
                 //ops.addArguments("--remote-allow-origins=*");
-                //ops.addArguments("--headless=new");
+                ops.addArguments("--headless=new");
                 driver = new ChromeDriver(ops);
                 break;
             case "firefox":
@@ -56,11 +51,19 @@ public class CommonMethods extends PageInitializer {
     }
 
     public static WebDriverWait getWait() {
-        return new WebDriverWait(driver, Duration.ofSeconds(10));
+        return new WebDriverWait(driver, Duration.ofSeconds(20));
     }
 
     public static void waitForClickAbility(WebElement element) {
         getWait().until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    public static void waitForElementPresent(By locator) {
+        getWait().until(ExpectedConditions.presenceOfElementLocated(locator));
+    }
+
+    public static void waitForVisibility(WebElement element) {
+        getWait().until(ExpectedConditions.visibilityOfAllElements(element));
     }
 
     public static void click(WebElement element) {

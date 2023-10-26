@@ -6,6 +6,8 @@ import org.openqa.selenium.support.PageFactory;
 import utils.CommonMethods;
 
 public class AddEmployeePage extends CommonMethods {
+    @FindBy(id = "menu_pim_addEmployee")
+    public WebElement addEmployeeButton;
 
     @FindBy(id = "firstName")
     public WebElement firstNameField;
