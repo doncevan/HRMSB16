@@ -12,6 +12,7 @@ import utils.Constants;
 import utils.DBUtils;
 import utils.ExcelReader;
 
+import java.io.File;
 import java.time.Duration;
 import java.util.List;
 import java.util.Map;
@@ -112,7 +113,11 @@ public class AddEmployee extends CommonMethods {
             sendText(mapNewEmp.get("firstName"), addEmployeePage.firstNameField);
             sendText(mapNewEmp.get("lastName"), addEmployeePage.lastNameField);
             sendText(mapNewEmp.get("middleName"), addEmployeePage.middleNameField);
-            sendText(mapNewEmp.get("photograph"), addEmployeePage.photograph);
+            File file = new File(mapNewEmp.get("photograph"));
+            String absolutePath = file.getAbsolutePath();
+            sendText(absolutePath, addEmployeePage.photograph);
+
+            //sendText(mapNewEmp.get("photograph"), addEmployeePage.photograph);
 
             //we can enter username and password only after selecting the checkbox
             if (!addEmployeePage.checkBoxLocator.isSelected()) {
