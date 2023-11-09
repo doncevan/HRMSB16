@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3dd315e4-500f-427b-9af7-5164f474a62d" name="Changes" comment="Updated POM.">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/maven.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/magre.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testdata/Batch16.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Batch16.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testdata/batch16ExcelFile.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testdata/batch16ExcelFile.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,36 +60,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/magre/IdeaProjects/TestNG_Project&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/magre/IdeaProjects/HRMSB16/src/main/java/org/syntax/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.39156628&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Subversion.SSH&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "full.screen.before.presentation.mode": "false",
+    "git-widget-placeholder": "main",
+    "ignore.preview.features.used": "true",
+    "last_opened_file_path": "C:/Users/magre/IdeaProjects/HRMSB16",
+    "onboarding.tips.debug.path": "C:/Users/magre/IdeaProjects/HRMSB16/src/main/java/org/syntax/Main.java",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.39156628",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;,
-      &quot;module&quot;,
-      &quot;repository&quot;
+  "keyToStringList": {
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\magre\IdeaProjects\HRMSB16\src\test\resources\testdata" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\magre\IdeaProjects\HRMSB16" />
       <recent name="C:\Users\magre\IdeaProjects\HRMSB16\src\test\resources" />
       <recent name="C:\Users\magre\IdeaProjects\HRMSB16\src\test\resources\testdata" />
     </key>
@@ -106,7 +102,7 @@
       <recent name="runners" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Adding one employee from feature file">
+  <component name="RunManager" selected="Cucumber Java.Scenario: adding multiple employees using excel file">
     <configuration name="Feature: Login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Login.feature" />
@@ -330,22 +326,6 @@
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
       <updated>1692203632845</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Some updates and new Excel file data">
-      <option name="closed" value="true" />
-      <created>1693316756794</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1693316756794</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Updated ChromeDriver for headless run">
-      <option name="closed" value="true" />
-      <created>1693317208232</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1693317208232</updated>
     </task>
     <task id="LOCAL-00020" summary="Updated ChromeDriver for headless run">
       <option name="closed" value="true" />
@@ -627,7 +607,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699497835625</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Updated POM.">
+      <option name="closed" value="true" />
+      <created>1699499875256</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1699499875256</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Updated POM.">
+      <option name="closed" value="true" />
+      <created>1699502687105</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1699502687105</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="UnknownFeatures">
