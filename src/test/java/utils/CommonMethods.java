@@ -1,6 +1,7 @@
 package utils;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.logging.log4j.core.config.Configurator;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -13,6 +14,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
+import java.util.List;
 import java.util.Random;
 
 public class CommonMethods extends PageInitializer {
@@ -34,12 +36,18 @@ public class CommonMethods extends PageInitializer {
         }
         driver.manage().window().maximize();
         driver.get(ConfigReader.getPropertyValue("url"));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Constants.WAIT_TIME));
         //this method is going to initialize all the objects available inside this method
         initializePageObjects();
+        Configurator.initialize(null, "log4j2.xml");
+        Log.startTestCase("This is the beginning of my Test case");
+        Log.info("My test case is executing right now");
+        Log.warn("My test case might have some trivial issues");
     }
 
     public static void closeBrowser() {
+        Log.info("This test case is about to get completed");
+        Log.endTestCase("This test case is finished");
         if (driver != null) {
             driver.quit();
         }
@@ -48,6 +56,10 @@ public class CommonMethods extends PageInitializer {
     public static void sendText(String text, WebElement element) {
         element.clear();
         element.sendKeys(text);
+    }
+
+    public static Select clickOnDropdown(WebElement element) {
+        return new Select(element);
     }
 
     public static WebDriverWait getWait() {
@@ -71,6 +83,15 @@ public class CommonMethods extends PageInitializer {
         element.click();
     }
 
+    public static void selectByOptions(WebElement element, String text) {
+        List<WebElement> options = clickOnDropdown(element).getOptions();
+        for (WebElement option : options) {
+            String ddlOptionText = option.getText();
+            if (ddlOptionText.equals(text)) {
+                option.click();
+            }
+        }
+    }
 
     public static void selectFromDropdown(WebElement dropDown, String visibleText) {
         Select sel = new Select(dropDown);
