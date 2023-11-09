@@ -9,5 +9,8 @@
         <module name="HRMSB16" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="HRMSB16" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
