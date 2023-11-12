@@ -113,9 +113,7 @@ public class AddEmployee extends CommonMethods {
             sendText(mapNewEmp.get("firstName"), addEmployeePage.firstNameField);
             sendText(mapNewEmp.get("lastName"), addEmployeePage.lastNameField);
             sendText(mapNewEmp.get("middleName"), addEmployeePage.middleNameField);
-            File file = new File(mapNewEmp.get("photograph"));
-            String absolutePath = file.getAbsolutePath();
-            sendText(absolutePath, addEmployeePage.photograph);
+            sendText(mapNewEmp.get("photograph"), addEmployeePage.photograph);
 
             //sendText(mapNewEmp.get("photograph"), addEmployeePage.photograph);
 
