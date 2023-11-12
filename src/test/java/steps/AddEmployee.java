@@ -113,7 +113,14 @@ public class AddEmployee extends CommonMethods {
             sendText(mapNewEmp.get("firstName"), addEmployeePage.firstNameField);
             sendText(mapNewEmp.get("lastName"), addEmployeePage.lastNameField);
             sendText(mapNewEmp.get("middleName"), addEmployeePage.middleNameField);
-            sendText(mapNewEmp.get("photograph"), addEmployeePage.photograph);
+            // Get the current directory
+            String currentDir = System.getProperty("user.dir");
+
+// Construct the relative file path
+            String relativeFilePath = currentDir + "/src/test/resources/testdata/Batch16.jpeg";
+
+// Use the relative file path when setting the photograph
+            addEmployeePage.photograph.sendKeys(relativeFilePath);
 
             //sendText(mapNewEmp.get("photograph"), addEmployeePage.photograph);
 
