@@ -115,14 +115,10 @@ public class AddEmployee extends CommonMethods {
             sendText(mapNewEmp.get("middleName"), addEmployeePage.middleNameField);
             // Get the current directory
             String currentDir = System.getProperty("user.dir");
-
-// Construct the relative file path
+            // Construct the relative file path
             String relativeFilePath = currentDir + "/src/test/resources/testdata/Batch16.jpeg";
-
-// Use the relative file path when setting the photograph
+            // Use the relative file path when setting the photograph
             addEmployeePage.photograph.sendKeys(relativeFilePath);
-
-            //sendText(mapNewEmp.get("photograph"), addEmployeePage.photograph);
 
             //we can enter username and password only after selecting the checkbox
             if (!addEmployeePage.checkBoxLocator.isSelected()) {
@@ -131,7 +127,6 @@ public class AddEmployee extends CommonMethods {
             sendText(mapNewEmp.get("username") + random, addEmployeePage.usernameTextFieldBox);
             sendText(mapNewEmp.get("password"), addEmployeePage.passwordTextFieldBox);
             sendText(mapNewEmp.get("confirmPassword"), addEmployeePage.confirmPasswordBox);
-
 
             //here we are fetching the employee id from the UI using get attribute method
             String empIdValue = addEmployeePage.employeeIdField.getAttribute("value");
