@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3dd315e4-500f-427b-9af7-5164f474a62d" name="Changes" comment="Updated POM.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/steps/AddEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/AddEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/Constants.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -325,14 +328,6 @@
       <option name="project" value="LOCAL" />
       <updated>1692203632845</updated>
     </task>
-    <task id="LOCAL-00027" summary="Updated dependencies and Excel file">
-      <option name="closed" value="true" />
-      <created>1696114069716</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1696114069716</updated>
-    </task>
     <task id="LOCAL-00028" summary="Updated dependencies and Excel file">
       <option name="closed" value="true" />
       <created>1696114076721</created>
@@ -621,7 +616,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699756484068</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Updated POM.">
+      <option name="closed" value="true" />
+      <created>1699757956525</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1699757956525</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="UnknownFeatures">

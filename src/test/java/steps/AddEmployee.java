@@ -12,10 +12,11 @@ import utils.Constants;
 import utils.DBUtils;
 import utils.ExcelReader;
 
-import java.io.File;
 import java.time.Duration;
 import java.util.List;
 import java.util.Map;
+
+import static utils.Constants.PHOTOGRAPH_PATH;
 
 public class AddEmployee extends CommonMethods {
 
@@ -114,11 +115,11 @@ public class AddEmployee extends CommonMethods {
             sendText(mapNewEmp.get("lastName"), addEmployeePage.lastNameField);
             sendText(mapNewEmp.get("middleName"), addEmployeePage.middleNameField);
             // Get the current directory
-            String currentDir = System.getProperty("user.dir");
+            //String currentDir = System.getProperty("user.dir");
             // Construct the relative file path
-            String relativeFilePath = currentDir + "/src/test/resources/testdata/Batch16.jpeg";
+            //String relativeFilePath = currentDir + "/src/test/resources/testdata/Batch16.jpeg";
             // Use the relative file path when setting the photograph
-            addEmployeePage.photograph.sendKeys(relativeFilePath);
+            addEmployeePage.photograph.sendKeys(PHOTOGRAPH_PATH);
 
             //we can enter username and password only after selecting the checkbox
             if (!addEmployeePage.checkBoxLocator.isSelected()) {
